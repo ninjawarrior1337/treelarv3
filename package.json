@@ -1,0 +1,36 @@
+{
+  "name": "treelarv3",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev --port 1234 --host",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview --port 1234",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^1.0.0-next.21",
+    "@sveltejs/kit": "next",
+    "@types/canvas-confetti": "^1.4.2",
+    "@types/marked": "^3.0.3",
+    "@types/three": "^0.133.1",
+    "svelte": "^3.44.2",
+    "svelte-check": "^2.2.10",
+    "svelte-preprocess": "^4.9.8",
+    "svelte-windicss-preprocess": "^4.1.7",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2",
+    "vite-plugin-windicss": "^1.5.1",
+    "windicss": "^3.2.1"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "canvas-confetti": "^1.4.0",
+    "marked": "^3.0.8",
+    "svelte-cubed": "^0.2.0",
+    "svelte-fa": "^2.4.0",
+    "three": "^0.133.1"
+  }
+}
