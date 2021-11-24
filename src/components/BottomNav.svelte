@@ -32,7 +32,10 @@
       <button class="row-span-1 bg-black text-3xl">
         <img class="w-16 p-2 h-full" alt="logo" src="/logo/logo2020.svg">
       </button>
-      <div class="row-span-2 bg-black"></div>
+      <a class="row-span-2 bg-black flex flex-col items-center justify-center">
+        <Fa icon={faBook} size="2x"></Fa>
+        Journal
+      </a>
       <a
         target="_blank"
         href="https://anilist.co/user/Treelar"
@@ -48,8 +51,9 @@
 <script>
 import Fa from "svelte-fa/src/fa.svelte"
 import {fly} from "svelte/transition"
-import {faToriiGate, faBrain, faHome} from "@fortawesome/free-solid-svg-icons"
-let navOpen = false
+import {faToriiGate, faBrain, faHome, faBook} from "@fortawesome/free-solid-svg-icons"
+import {mode} from "$app/env"
+let navOpen = mode === "development"
 const toggleNav = () => {
     navOpen = !navOpen
 }

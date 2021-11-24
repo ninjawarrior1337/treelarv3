@@ -9,6 +9,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.16.3",
     "@sveltejs/adapter-static": "^1.0.0-next.21",
     "@sveltejs/kit": "next",
     "@types/canvas-confetti": "^1.4.2",
@@ -27,10 +28,14 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@metamask/eth-sig-util": "^4.0.0",
+    "@toruslabs/torus-embed": "^1.18.1",
     "canvas-confetti": "^1.4.0",
+    "ethers": "^5.5.1",
     "marked": "^3.0.8",
     "svelte-cubed": "^0.2.0",
     "svelte-fa": "^2.4.0",
-    "three": "^0.133.1"
+    "three": "^0.133.1",
+    "web3modal": "^1.9.4"
   }
 }

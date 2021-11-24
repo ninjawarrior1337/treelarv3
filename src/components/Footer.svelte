@@ -1,13 +1,17 @@
 <script lang="ts">
     import {faBrain, faHeart} from "@fortawesome/free-solid-svg-icons"
-    import {faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons"
+    import {faEthereum, faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons"
     import {page} from "$app/stores"
     import Fa from "svelte-fa"
 
     const computeIcon = (path: string) => {
         if(path.includes("projects")) {
             return faBrain
-        } else {
+        }
+        else if(path.includes("journal")) {
+            return faEthereum
+        }
+        else {
             return faHeart
         }
     }
@@ -21,14 +25,14 @@
         Made with
         <Fa icon={currentIcon} class="text-muse"></Fa>
         by
-        <span class="bg-gradient-to-br from-muse via-treelar to-treelar bg-clip-text text-transparent">Treelar</span>
+        <span class="text-gradient-treelar">Treelar</span>
     </div>
-    <div class="space-x-2">
+    <div class="space-x-2 py-2 text-2xl">
         <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
-            <Fa icon={faGithub} size="1x"></Fa>
+            <Fa icon={faGithub}></Fa>
         </a>
         <a rel="prefetch" target="_blank" href="https://twitter.com/TYNROH">
-            <Fa icon={faTwitter} class="text-blue-400" size="1x"></Fa>
+            <Fa icon={faTwitter} class="text-blue-400"></Fa>
         </a>
     </div>
 </div>

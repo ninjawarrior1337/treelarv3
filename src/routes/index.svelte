@@ -1,6 +1,7 @@
 <script lang="ts">
     import Logo3D from "../components/Logo3D.svelte";
     import {currentBirthdayIdol} from "$lib/useLoveLive"
+    import { loginWithEth, selectedAccount } from "$lib/web3";
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
         React: ["#00d8ff", "https://reactjs.org/"],
@@ -38,8 +39,11 @@
     <Logo3D></Logo3D>
     <div class="mx-16 space-y-2">
         <h1 class="text-4xl md:text-6xl mb-4 pb-4">
-            Hi, I'm
-            <span class="bg-gradient-to-r from-muse via-treelar to-treelar bg-clip-text text-transparent">Treelar</span>
+            <span>Hi,</span>
+            {#if $selectedAccount !== "0x13Bf47AeFF3e7496097670eb4849f9311FFaD865"}
+            <span>I'm</span>
+            {/if}
+            <span on:click={loginWithEth} class="text-gradient-treelar cursor-pointer">Treelar</span>
         </h1>
         <h2 class="text-3xl md:text-4xl">{@html colorText("日本語勉強中")}</h2>
         <h2 class="text-3xl md:text-4xl">

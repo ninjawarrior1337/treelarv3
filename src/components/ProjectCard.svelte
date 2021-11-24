@@ -7,6 +7,7 @@ export let project: {
     img?: string;
     links?: string[];
 } = {}
+
 $: descriptionMd = marked(project.description)
 </script>
 

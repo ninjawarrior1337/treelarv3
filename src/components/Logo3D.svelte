@@ -1,6 +1,5 @@
 <script lang="ts">
     import * as THREE from "three"
-    // import * as SC from "svelte-cubed"
     import { onMount, onDestroy } from "svelte";
     import {browser} from "$app/env"
 
@@ -30,9 +29,10 @@
     onMount(async () => {
         renderer = new THREE.WebGLRenderer({
             alpha: true,
+            antialias: true,
             canvas,
-            antialias: true
         })
+
         camera.position.z = 30
         camera.position.y = 10
 
@@ -45,6 +45,7 @@
         
         let {GLTFLoader} = await import("three/examples/jsm/loaders/GLTFLoader")
         let loader = new GLTFLoader()
+
         loader.load("logo2020.glb", (gltf) => {
             logo = gltf.scene.children[1]
             const box = new THREE.Box3().setFromObject(logo)
