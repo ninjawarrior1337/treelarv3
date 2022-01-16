@@ -1,41 +1,77 @@
 import {ethers} from "ethers"
-import Web3Modal from "web3modal"
+import { browser } from "$app/env";
 import {writable, derived, readable, get} from "svelte/store"
+
+let ethereum;
+if(browser) {
+    ethereum = window.ethereum
+}
 
 export const isLoggedIn = writable(false)
 export const signer = writable<ethers.Signer>(null)
 
-export const selectedAccount = readable<string>(null, set => {
-    let interval;
+export const selectedAccount = browser ? readable<string>(null, set => {
+    const onAccountsChanged = (accounts: string[]) => {
+        if(accounts.length === 0) {
+            return null
+        }
 
-    const unsubscribe = signer.subscribe(s => {
-        interval ? clearInterval(interval) : null
-        interval = setInterval(() => {
-            if(s) {
-                s.getAddress().then((a) => set(a))
-            } else {
-                set("")
-            }
-        }, 1000)
+        set(accounts[0])
+    }
+
+    const updateAccounts = () => {
+        ethereum.request({ method: 'eth_accounts' })
+        .then(onAccountsChanged)
+        .catch((err) => {
+            console.error(err);
+        });
+    }
+
+    const uns = isLoggedIn.subscribe(l => {
+        if(!l) {
+            set(null)
+        } else {
+            updateAccounts()
+        }
     })
 
-    return () => {unsubscribe(); clearInterval(interval)}
-})
+    ethereum.on("accountsChanged", onAccountsChanged)
 
-export const shortSelectedAccount = derived(selectedAccount, a => a ? `${a.substr(0, 6)}...${a.substr(-4)}` : "")
+    return () => {
+        ethereum.removeListener("accountsChanged", onAccountsChanged)
+        uns()
+    }
+}) : null
+
+export const shortSelectedAccount = derived(selectedAccount, a => a ? `${a.substring(0, 6)}...${a.substring(a.length-4)}` : "")
+
+export const chainId = browser ? readable<string>(null, set => {
+    const onChainChanged = (chainId: string) => {
+        set(chainId)
+    }
+    ethereum.on("chainChanged", onChainChanged)
+    ethereum.request({ method: 'eth_chainId' })
+    .then(onChainChanged)
+    .catch((err) => {
+        // Some unexpected error.
+        // For backwards compatibility reasons, if no accounts are available,
+        // eth_accounts will return an empty array.
+        console.error(err);
+    });
+    return () => {
+        ethereum.removeListener("chainChanged", onChainChanged)
+    }
+}) : null
 
 export async function loginWithEth() {
-    const web3Modal = new Web3Modal({
-        providerOptions: {
-            
-        },
-        cacheProvider: true,
-        network: "rinkeby"
-    })
-    let ethereum = await web3Modal.connect()
-    let provider = new ethers.providers.Web3Provider(ethereum, "rinkeby")
-    signer.set(provider.getSigner())
-    isLoggedIn.set(true)
+    try {
+        await ethereum.request({method: "eth_requestAccounts"})
+        let provider = new ethers.providers.Web3Provider(ethereum)
+        signer.set(provider.getSigner())
+        isLoggedIn.set(true)
+    } catch(e) {
+        console.error(e)
+    }
 }
 
 export function logout() {
