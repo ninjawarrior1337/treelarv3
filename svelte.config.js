@@ -9,7 +9,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		preprocess(),
-		windi()
+		// windi()
 	],
 
 	kit: {
