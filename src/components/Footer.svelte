@@ -29,7 +29,7 @@
         by
         <span class="text-gradient-treelar">Treelar</span>
     </div>
-    <span>{$chainId}</span>
+    <span>{$chainId ?? ""}</span>
     <div class="space-x-2 py-2 text-2xl">
         <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
             <Fa icon={faGithub}></Fa>

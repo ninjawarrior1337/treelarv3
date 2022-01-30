@@ -10,7 +10,7 @@ if(browser) {
 export const isLoggedIn = writable(false)
 export const signer = writable<ethers.Signer>(null)
 
-export const selectedAccount = browser ? readable<string>(null, set => {
+export const selectedAccount = ethereum ? readable<string>(null, set => {
     const onAccountsChanged = (accounts: string[]) => {
         if(accounts.length === 0) {
             return null
@@ -45,7 +45,7 @@ export const selectedAccount = browser ? readable<string>(null, set => {
 
 export const shortSelectedAccount = derived(selectedAccount, a => a ? `${a.substring(0, 6)}...${a.substring(a.length-4)}` : "")
 
-export const chainId = browser ? readable<string>(null, set => {
+export const chainId = ethereum ? readable<string>(null, set => {
     const onChainChanged = (chainId: string) => {
         set(chainId)
     }
