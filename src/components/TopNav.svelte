@@ -7,7 +7,7 @@
     <div class="w-full h-16 grid grid-cols-12 justify-items-center items-center">
         <div class="h-16 p-3 mr-12 col-span-3">
             <a sveltekit:prefetch href="/">
-                <img class="h-full object-contain" alt="logo" src="/logo/logo2020.png">
+                <img class="h-full object-contain" alt="logo" src="/logo/logoamphibia.png">
             </a>
         </div>
         <div class="h-full flex space-x-12 col-span-6">
