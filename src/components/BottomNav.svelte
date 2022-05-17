@@ -6,7 +6,7 @@
         on:click={() => toggleNav()}
         class="flex items-center fixed bottom-5 right-5 px-4 py-1.5 focus:outline-none bg-gradient-to-tr to-aqours from-muse rounded shadow text-center lg:hidden text-5xl border-2 origin-bottom-right text-white"
     >
-    <span class="font-light">=</span>
+    <span class="font-light mb-2">=</span>
     </button>
     {:else}
     <div
