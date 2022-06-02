@@ -13,7 +13,8 @@
       "description": "An [openings.moe](https://openings.moe) inspired website with more up to date openings and endings",
       "img": "/ongaku.png",
       "links": [
-         "Ongaku=https://ongaku.treelar.cf"
+         "Ongaku=https://ongaku.treelar.cf",
+         "GitHub=https://github.com/ninjawarrior1337/ongaku"
       ]
    },
    {
