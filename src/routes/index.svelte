@@ -7,7 +7,7 @@
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
         React: ["#00d8ff", "https://reactjs.org/"],
-        ラブライバー: [
+        ラブライブ: [
             "#e4007f",
             "https://love-live.fandom.com/wiki/Main_Page",
         ],
@@ -18,6 +18,8 @@
         IPFS: ["#69c4cd", "https://ipfs.io/"],
         Arch: ["#1793D1", "https://archlinux.org"],
         本: ["#ff0000", ""],
+        TOH: ["#AF6F2C", "https://theowlhouse.fandom.com"],
+        Amphibia: ["#11A77D", "https://amphibia.fandom.com/wiki/Amphibia_Wiki"]
     };
     const colorText = (input: String): String => {
         var finalStr = input;
@@ -51,14 +53,11 @@
         {/if}
         <h2 class="text-3xl md:text-4xl">{@html colorText("日本語勉強中")}</h2>
         <h2 class="text-3xl md:text-4xl">
-            {@html colorText("Svelte/Vue over React")}
+            {@html colorText("Svelte / Vue over React")}
         </h2>
-        <h2 class="text-3xl md:text-4xl">{@html colorText("ラブライバー")}</h2>
+        <h2 class="text-3xl md:text-4xl">{@html colorText("Amphibia / TOH / ラブライブ")}</h2>
         <h2 class="text-3xl md:text-4xl">
             {@html colorText("I use Arch btw")}
-        </h2>
-        <h2 class="text-3xl md:text-4xl">
-            {@html colorText("ETH and IPFS")}
         </h2>
 
         {#if $currentBirthdayIdol}
