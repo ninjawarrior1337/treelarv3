@@ -3,7 +3,7 @@ import {readable} from "svelte/store"
 export class LoveLiveUtils {
     private TODAY = new Date(Date.now())
     private idols = [] as Idol[]
-    private IdolDataUrl = "https://lovelive-treelar-cf.ipns.dweb.link/"
+    private IdolDataUrl = "https://gist.githubusercontent.com/ninjawarrior1337/2a51ec53e679550a1d254a465ee79c11/raw"
     public async setup() {
         if (this.idols.length > 0) {
             return
