@@ -5,7 +5,6 @@
     import GithubLogo from "~icons/fa6-brands/github"
     import TwitterLogo from "~icons/fa6-brands/twitter"
     import {page} from "$app/stores"
-    import Fa from "svelte-fa"
     import { chainId } from "$lib/web3";
 
     const computeIcon = (path: string) => {
