@@ -1,9 +1,9 @@
 <script>
 import TopNav from "../components/TopNav.svelte";
 import BottomNav from "../components/BottomNav.svelte";
-import "virtual:windi.css"
 import Confetti from "../components/Confetti.svelte";
 import Footer from "../components/Footer.svelte";
+import "virtual:windi.css"
 </script>
 
 <template>

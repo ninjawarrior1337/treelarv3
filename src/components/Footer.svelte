@@ -1,6 +1,9 @@
 <script lang="ts">
-    import {faBrain, faHeart} from "@fortawesome/free-solid-svg-icons"
-    import {faEthereum, faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons"
+    import faBrain from "~icons/fa-solid/brain"
+    import faHeart from "~icons/fa/heart"
+    import ethLogo from "~icons/fa6-brands/ethereum"
+    import GithubLogo from "~icons/fa6-brands/github"
+    import TwitterLogo from "~icons/fa6-brands/twitter"
     import {page} from "$app/stores"
     import Fa from "svelte-fa"
     import { chainId } from "$lib/web3";
@@ -10,32 +13,31 @@
             return faBrain
         }
         else if(path.includes("journal")) {
-            return faEthereum
+            return ethLogo
         }
         else {
             return faHeart
         }
     }
     
-    //@ts-ignore
     $: currentIcon = computeIcon($page.url.pathname)
 </script>
 
 <div class="bg-gradient-to-r from-muse via-treelar to-treelar h-1"></div>
 <div class="py-4 text-center w-full text-xl">
-    <div>
-        Made with
-        <Fa icon={currentIcon} class="text-muse"></Fa>
-        by
+    <div class="flex items-center justify-center space-x-1">
+        <span>Made with</span>
+        <svelte:component class="text-muse" this={currentIcon}></svelte:component>
+        <span>by</span>
         <span class="text-gradient-treelar">Treelar</span>
     </div>
     <span>{$chainId ?? ""}</span>
     <div class="space-x-2 py-2 text-2xl">
         <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
-            <Fa icon={faGithub}></Fa>
+            <GithubLogo></GithubLogo>
         </a>
         <a rel="prefetch" target="_blank" href="https://twitter.com/TYNROH">
-            <Fa icon={faTwitter} class="text-[#1DA1F2]"></Fa>
+            <TwitterLogo class="text-[#1DA1F2]"></TwitterLogo>
         </a>
     </div>
 </div>

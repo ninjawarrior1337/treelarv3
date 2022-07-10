@@ -19,14 +19,14 @@
         href="/"
         class="row-span-2 h-32 w-16 bg-black flex flex-col items-center justify-center"
       >
-        <Fa icon={faHome} size="2x"></Fa>
+        <FaHome class="text-3xl"></FaHome>
         <span>Home</span>
       </a>
       <a
         href="/projects"
         class="row-span-2 bg-black flex flex-col items-center justify-center"
       >
-        <Fa icon={faBrain} size="2x"></Fa>
+        <FaBrain class="text-2xl"></FaBrain>
         <span>Projects</span>
       </a>
       <button class="row-span-1 bg-black text-3xl">
@@ -34,7 +34,7 @@
       </button>
       {#if $isLoggedIn}
         <a href="journal" class="row-span-2 bg-black flex flex-col items-center justify-center">
-          <Fa icon={faBook} size="2x"></Fa>
+          <FaBook class="text-2xl"></FaBook>
           Journal
         </a>
       {:else}
@@ -45,7 +45,7 @@
         href="https://anilist.co/user/Treelar"
         class="col-span-2 bg-black grid grid-cols-2 justify-items-center items-center"
       >
-        <Fa icon={faToriiGate} size="2x"></Fa>
+        <ToriiGate class="text-2xl"></ToriiGate>
         <span>Anime</span>
       </a>
     </div>
@@ -53,9 +53,15 @@
 </template>
 
 <script>
-import Fa from "svelte-fa/src/fa.svelte"
 import {fly} from "svelte/transition"
-import {faToriiGate, faBrain, faHome, faBook} from "@fortawesome/free-solid-svg-icons"
+
+import ToriiGate from "~icons/fa6-solid/torii-gate"
+import FaBrain from "~icons/fa6-solid/brain"
+import FaHeart from "~icons/fa/heart"
+import FaHome from "~icons/fa/home"
+import FaBook from "~icons/fa/book"
+
+
 import {mode} from "$app/env"
 import { isLoggedIn } from "$lib/web3";
 let navOpen = mode === "development"
