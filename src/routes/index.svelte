@@ -61,8 +61,8 @@
         </h2>
 
         {#if $currentBirthdayIdol}
-        <h2 id="idolBirthday" class="text-2xl md:text-4xl mt-8 truncate" style="--idol-color: {$currentBirthdayIdol?.color}">
-            Happy Birthday {$currentBirthdayIdol?.name}!
+        <h2 id="idolBirthday" class="text-2xl md:text-4xl pb-4 truncate" style="--idol-color: {$currentBirthdayIdol.color}">
+            Happy Birthday {$currentBirthdayIdol.name}!
         </h2>
         {/if}
     </div>

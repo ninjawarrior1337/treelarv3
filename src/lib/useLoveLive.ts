@@ -53,7 +53,7 @@ export class LoveLiveUtils {
 
 const LLUtils = new LoveLiveUtils()
 
-export const currentBirthdayIdol = readable<Idol>(null, (set) => {
+export const currentBirthdayIdol = readable<Idol|null>(null, (set) => {
     LLUtils.setup().then(() => {
         set(LLUtils.getBirthdayIdol())
     })
