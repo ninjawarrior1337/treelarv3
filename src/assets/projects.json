@@ -27,7 +27,7 @@
    },
    {
       "title": "Mari",
-      "img": "https://mari.treelar.cf/mari.png",
+      "img": "https://mari.v.treelar.xyz/mari.png",
       "description": "A peer-to-peer file sharing service that utilizes WebRTC and uses React for the frontend. This is a replacement for reep.io.",
       "links": [
          "Mari=https://mari.treelar.cf",
