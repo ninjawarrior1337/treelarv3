@@ -13,7 +13,7 @@
       "description": "An [openings.moe](https://openings.moe) inspired website with more up to date openings and endings",
       "img": "/ongaku.png",
       "links": [
-         "Ongaku=https://ongaku.treelar.cf",
+         "Ongaku=https://ongaku.treelar.xyz",
          "GitHub=https://github.com/ninjawarrior1337/ongaku"
       ]
    },
@@ -39,7 +39,7 @@
       "description": "A Mario-like game that was supposed to be that you reset Mario levels but just ended up being a mario clone.",
       "img": "/alejandro.png",
       "links": [
-         "Reverse=https://reverse.treelar.cf",
+         "Reverse=https://reverse.v.treelar.xyz",
          "GitHub=https://github.com/ReverseDevTeam/ReverseGame"
       ]
    },
@@ -55,14 +55,14 @@
       "title": "llwikiaapi",
       "description": "An API for the Love Live Wikia Page. This was so that I could look at lyrics and listen to songs and not get judged at school... In hindsight though people would probably judge me for lookin at a wall of text vs a nice looking webpage but meh, I don't care about _judgement_ from reading text.\n",
       "links": [
-         "API=https://llwikia.treelar.cf"
+         "API=https://llwikia.v.treelar.xyz"
       ]
    },
    {
       "title": "This Website",
       "description": "Yah, I don't know what else to say about this one.",
       "links": [
-         "Why would you need this link=https://treelar.cf"
+         "Why would you need this link=https://treelar.xyz"
       ]
    }
 ]
