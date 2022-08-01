@@ -55,7 +55,7 @@
         <h2 class="text-3xl md:text-4xl">
             {@html colorText("Svelte / Vue over React")}
         </h2>
-        <h2 class="text-3xl md:text-4xl">{@html colorText("Amphibia / TOH / ラブライブ")}</h2>
+        <h2 class="text-3xl md:text-4xl">{@html colorText("ラブライブ / TOH / Amphibia")}</h2>
         <h2 class="text-3xl md:text-4xl">
             {@html colorText("I use Arch btw")}
         </h2>
