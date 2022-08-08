@@ -10,9 +10,6 @@ const config = {
         WindiCSS(),
         Icons({compiler: "svelte"})
     ],
-    optimizeDeps: {
-		exclude: [ "@fortawesome/free-solid-svg-icons", "@fortawesome/free-brands-svg-icons" ]
-	}
 }
 
 export default config

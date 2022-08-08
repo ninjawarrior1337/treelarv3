@@ -57,14 +57,15 @@ import {fly} from "svelte/transition"
 
 import ToriiGate from "~icons/fa6-solid/torii-gate"
 import FaBrain from "~icons/fa6-solid/brain"
-import FaHeart from "~icons/fa/heart"
 import FaHome from "~icons/fa/home"
 import FaBook from "~icons/fa/book"
 
 
-import {mode} from "$app/env"
+import {dev} from "$app/env"
 import { isLoggedIn } from "$lib/web3";
-let navOpen = mode === "development"
+
+let navOpen = dev
+
 const toggleNav = () => {
     navOpen = !navOpen
 }

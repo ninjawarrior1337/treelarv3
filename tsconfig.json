@@ -8,7 +8,8 @@
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
 		},
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }
