@@ -1,6 +1,5 @@
 <script>
     import {confettiActive} from "$lib/useConfetti"
-    import { isLoggedIn, shortSelectedAccount, logout } from "$lib/web3";
 </script>
 
 <div class="fixed hidden lg:block z-10 w-full bg-gray-900 mb-8 text-white">
@@ -32,15 +31,6 @@
             >
                 Anime
             </a>
-            {#if $isLoggedIn}
-            <a
-                sveltekit:prefetch
-                href="/journal"
-                class="grid place-items-center text-white lg:text-lg text-xl bg-gray-800 px-2"
-            >
-                Open Letters
-            </a>
-            {/if}
         </div>
         <div class="col-span-3 flex flex-row items-center space-x-3">
             {#if $confettiActive}
@@ -50,9 +40,6 @@
             >
                 Turn Off Confetti
             </button>
-            {/if}
-            {#if $isLoggedIn}
-            <h3 class="text-xl font-semibold text-gradient-treelar cursor-pointer" on:click={logout}>{$shortSelectedAccount}</h3>
             {/if}
         </div>
     </div>

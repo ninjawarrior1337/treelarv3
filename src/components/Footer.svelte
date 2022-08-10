@@ -5,7 +5,6 @@
     import GithubLogo from "~icons/fa6-brands/github"
     import TwitterLogo from "~icons/fa6-brands/twitter"
     import {page} from "$app/stores"
-    import { chainId } from "$lib/web3";
 
     const computeIcon = (path: string) => {
         if(path.includes("projects")) {
@@ -30,7 +29,6 @@
         <span>by</span>
         <span class="text-gradient-treelar">Treelar</span>
     </div>
-    <span>{$chainId ?? ""}</span>
     <div class="space-x-2 py-2 text-2xl">
         <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
             <GithubLogo></GithubLogo>

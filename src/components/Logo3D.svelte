@@ -21,7 +21,6 @@
     onDestroy(() => {
         scene.remove()
         if(browser) {
-            console.log("stopping anim")
             cancelAnimationFrame(animationFrameId)
         }
     })

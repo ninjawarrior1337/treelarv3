@@ -1,8 +1,6 @@
 <script lang="ts">
     import Logo3D from "../components/Logo3D.svelte";
     import {currentBirthdayIdol} from "$lib/useLoveLive"
-    import { chainId, loginWithEth, selectedAccount } from "$lib/web3";
-    import { browser } from "$app/env";
 
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
@@ -42,15 +40,10 @@
 <div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen">
     <Logo3D></Logo3D>
     <div class="mx-16 space-y-2">
-        {#if browser}
-            <h1 class="text-4xl md:text-6xl mb-4 pb-4">
-                <span>Hi,</span>
-                {#if $selectedAccount !== "0x13bf47aeff3e7496097670eb4849f9311ffad865"}
-                <span>I'm</span>
-                {/if}
-                <span on:click={loginWithEth} class="text-gradient-treelar cursor-pointer">Treelar</span>
-            </h1>
-        {/if}
+        <h1 class="text-4xl md:text-6xl mb-4 pb-4">
+            <span>Hi, I'm</span>
+            <span class="text-gradient-treelar cursor-pointer">Treelar</span>
+        </h1>
         <h2 class="text-3xl md:text-4xl">{@html colorText("日本語勉強中")}</h2>
         <h2 class="text-3xl md:text-4xl">
             {@html colorText("Svelte / Vue over React")}

@@ -32,14 +32,7 @@
       <button class="row-span-1 bg-black text-3xl">
         <img class="w-16 p-2 h-full" alt="logo" src="/logo/logo2020.svg">
       </button>
-      {#if $isLoggedIn}
-        <a href="journal" class="row-span-2 bg-black flex flex-col items-center justify-center">
-          <FaBook class="text-2xl"></FaBook>
-          Journal
-        </a>
-      {:else}
-        <div class="row-span-2 bg-black"></div>
-      {/if}
+      <div class="row-span-2 bg-black"></div>
       <a
         target="_blank"
         href="https://anilist.co/user/Treelar"
@@ -58,11 +51,8 @@ import {fly} from "svelte/transition"
 import ToriiGate from "~icons/fa6-solid/torii-gate"
 import FaBrain from "~icons/fa6-solid/brain"
 import FaHome from "~icons/fa/home"
-import FaBook from "~icons/fa/book"
-
 
 import {dev} from "$app/env"
-import { isLoggedIn } from "$lib/web3";
 
 let navOpen = dev
 
