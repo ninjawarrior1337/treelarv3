@@ -1,3 +1,4 @@
+import { browser } from "$app/env"
 import {readable} from "svelte/store"
 
 export class LoveLiveUtils {
@@ -54,7 +55,9 @@ export class LoveLiveUtils {
 const LLUtils = new LoveLiveUtils()
 
 export const currentBirthdayIdol = readable<Idol|null>(null, (set) => {
-    LLUtils.setup().then(() => {
-        set(LLUtils.getBirthdayIdol())
-    })
+    if(browser) {
+        LLUtils.setup().then(() => {
+            set(LLUtils.getBirthdayIdol())
+        })
+    }
 })
