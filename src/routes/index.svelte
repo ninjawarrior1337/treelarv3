@@ -1,6 +1,12 @@
 <script lang="ts">
-    import Logo3D from "../components/Logo3D.svelte";
     import {currentBirthdayIdol} from "$lib/useLoveLive"
+    import { onMount } from "svelte";
+
+    let Logo3D
+
+    onMount(async () => {
+        Logo3D = (await import("../components/Logo3D.svelte")).default
+    })
 
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
@@ -38,7 +44,11 @@
 </svelte:head>
 
 <div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen">
-    <Logo3D></Logo3D>
+    {#if Logo3D}
+        <svelte:component this={Logo3D}></svelte:component>
+    {:else}
+        <div class="lg:order-last w-[450px]"></div>
+    {/if}
     <div class="mx-16 space-y-2">
         <h1 class="text-4xl md:text-6xl mb-4 pb-4">
             <span>Hi, I'm</span>
