@@ -3,7 +3,7 @@ import TopNav from "../components/TopNav.svelte";
 import BottomNav from "../components/BottomNav.svelte";
 import Confetti from "../components/Confetti.svelte";
 import Footer from "../components/Footer.svelte";
-import "virtual:windi.css"
+import "../styles.css"
 
 export let data: (import("./$types").PageData)
 

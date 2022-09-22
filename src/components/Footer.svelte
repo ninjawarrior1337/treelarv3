@@ -29,7 +29,7 @@
         <span>by</span>
         <span class="text-gradient-treelar">Treelar</span>
     </div>
-    <div class="space-x-2 py-2 text-2xl">
+    <div class="space-x-4 py-2 text-2xl flex items-center justify-center">
         <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
             <GithubLogo></GithubLogo>
         </a>
