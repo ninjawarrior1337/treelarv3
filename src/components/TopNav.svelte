@@ -5,20 +5,20 @@
 <div class="fixed hidden lg:block z-10 w-full bg-gray-900 mb-8 text-white">
     <div class="w-full h-16 grid grid-cols-12 justify-items-center items-center">
         <div class="h-16 p-3 mr-12 col-span-3">
-            <a sveltekit:prefetch href="/">
+            <a data-sveltekit-prefetch href="/">
                 <img class="h-full object-contain" alt="logo" src="/logo/logo2020.png">
             </a>
         </div>
         <div class="h-full flex space-x-12 col-span-6">
             <a
-                sveltekit:prefetch
+                data-sveltekit-prefetch
                 href="/"
                 class="grid place-items-center text-gray-200 text-white lg:text-lg text-xl bg-gray-800 px-2"
             >
                 Home
             </a>
             <a
-                sveltekit:prefetch
+                data-sveltekit-prefetch
                 href="/projects"
                 class="grid place-items-center text-white lg:text-lg text-xl bg-gray-800 px-2"
             >

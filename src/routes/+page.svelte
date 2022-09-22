@@ -1,8 +1,9 @@
 <script lang="ts">
-    import {currentBirthdayIdol} from "$lib/useLoveLive"
     import { onMount } from "svelte";
 
     let Logo3D
+
+    export let data: (import("./$types").LayoutData)
 
     onMount(async () => {
         Logo3D = (await import("../components/Logo3D.svelte")).default
@@ -63,16 +64,10 @@
             {@html colorText("I use Arch btw")}
         </h2>
 
-        {#if $currentBirthdayIdol}
-        <h2 id="idolBirthday" class="text-2xl md:text-4xl pb-4 truncate" style="--idol-color: {$currentBirthdayIdol.color}">
-            Happy Birthday {$currentBirthdayIdol.name}!
+        {#if data.idol}
+        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {data.idol.color}">
+            Happy Birthday {data.idol.name}!
         </h2>
         {/if}
     </div>
 </div>
-
-<style>
-    #idolBirthday {
-        color: var(--idol-color);
-    }
-</style>

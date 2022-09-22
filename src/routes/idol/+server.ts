@@ -1,7 +1,8 @@
-import { browser } from "$app/environment"
-import {readable} from "svelte/store"
+import type { RequestHandler } from "./$types";
+import {dev} from "$app/environment"
+import {json} from "@sveltejs/kit"
 
-export class LoveLiveUtils {
+class LoveLiveUtils {
     private TODAY = new Date(Date.now())
     private idols = [] as Idol[]
     private IdolDataUrl = "https://gist.githubusercontent.com/ninjawarrior1337/2a51ec53e679550a1d254a465ee79c11/raw"
@@ -48,16 +49,19 @@ export class LoveLiveUtils {
                 return i
             }
         }
-        return null
+        return dev ? this.idols.find((i) => {i.name.includes("Wakana")}) : null
     }
 }
 
-const LLUtils = new LoveLiveUtils()
+export const COMPUTE = async () => {
+    const LL = new LoveLiveUtils();
+    await LL.setup()
+    return LL.getBirthdayIdol()
+}
 
-export const currentBirthdayIdol = readable<Idol|null>(null, (set) => {
-    if(browser) {
-        LLUtils.setup().then(() => {
-            set(LLUtils.getBirthdayIdol())
-        })
-    }
-})
+export const GET: RequestHandler = async (req) => {
+    let idol = await COMPUTE()
+    return json({
+        idol
+    })
+}
