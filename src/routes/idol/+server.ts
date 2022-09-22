@@ -49,8 +49,8 @@ class LoveLiveUtils {
                 return i
             }
         }
-        return null
-        // return dev ? this.idols.find((i) => i.name.includes("Shiki")) || null : null
+        // return null
+        return dev ? this.idols.find((i) => i.name.includes("Shiki")) || null : null
     }
 }
 
