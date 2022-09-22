@@ -1,6 +1,7 @@
 <script lang="ts">
-    import confetti from "canvas-confetti";
     import { onMount } from "svelte";
+    import confetti from "canvas-confetti";
+    import { browser } from "$app/environment";
 
     export let colors: string[];
 
@@ -8,9 +9,9 @@
         return Math.random() * (max - min) + min;
     };
 
-    onMount(() => {
-        window.setInterval(() => {
-            if (colors) {
+    onMount(async () => {
+        if (colors.length > 0 && browser) {
+            window.setInterval(() => {
                 confetti({
                     particleCount: 1,
                     startVelocity: 0,
@@ -25,8 +26,8 @@
                     scalar: randomInRange(0.4, 1),
                     drift: randomInRange(-0.4, 0.4),
                 });
-            }
-        }, 10);
+            }, 10);
+        }
     });
 </script>
 

@@ -48,19 +48,23 @@
     {#if Logo3D}
         <svelte:component this={Logo3D}></svelte:component>
     {:else}
-        <div class="lg:order-last w-[450px]"></div>
+        <div class="lg:order-last w-[450px] h-[450px]"></div>
     {/if}
     <div class="mx-16 space-y-2">
-        <h1 class="text-4xl md:text-6xl mb-4 pb-4">
+        <h1 class="text-4xl lg:text-6xl mb-4 pb-4">
             <span>Hi, I'm</span>
             <span class="text-gradient-treelar cursor-pointer">Treelar</span>
         </h1>
-        <h2 class="text-3xl md:text-4xl">{@html colorText("日本語勉強中")}</h2>
-        <h2 class="text-3xl md:text-4xl">
-            {@html colorText("Svelte / Vue over React")}
+        <h2 class="text-2xl lg:text-4xl">
+            {@html colorText("日本語勉強中")}
         </h2>
-        <h2 class="text-3xl md:text-4xl">{@html colorText("ラブライブ / TOH / Amphibia")}</h2>
-        <h2 class="text-3xl md:text-4xl">
+        <h2 class="text-2xl lg:text-4xl">
+            {@html colorText("Svelte / Vue / React")}
+        </h2>
+        <h2 class="text-2xl lg:text-4xl">
+            {@html colorText("ラブライブ / TOH / Amphibia")}
+        </h2>
+        <h2 class="text-2xl lg:text-4xl">
             {@html colorText("I use Arch btw")}
         </h2>
 
