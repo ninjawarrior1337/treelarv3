@@ -3,7 +3,7 @@
 
     let Logo3D
 
-    export let data: (import("./$types").LayoutData)
+    export let data: (import("./$types").PageData)
 
     onMount(async () => {
         Logo3D = (await import("../components/Logo3D.svelte")).default
