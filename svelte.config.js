@@ -1,12 +1,12 @@
-// import adapter from "@sveltejs/adapter-auto"
-import adapter from "@sveltejs/adapter-vercel"
+import auto from "@sveltejs/adapter-auto"
+import vercel from "@sveltejs/adapter-vercel"
 import preprocess from "svelte-preprocess"
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
     preprocess: preprocess(),
     kit: {
-        adapter: adapter({edge: true}),
+        adapter: process.env["VERCEL"] ? vercel({edge: true}) : auto(),
         inlineStyleThreshold: 5000
     }
 }
