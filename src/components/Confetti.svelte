@@ -2,7 +2,7 @@
     import confetti from "canvas-confetti"
     import { confettiActive, confettiColor } from "$lib/useConfetti";
     import { onDestroy, onMount } from "svelte";
-    import {browser} from "$app/env"
+    import {browser} from "$app/environment"
     import { currentBirthdayIdol } from "$lib/useLoveLive";
 
     const randomInRange = (min: number, max: number) => {

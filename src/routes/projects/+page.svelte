@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts">
-import ProjectCard from "../components/ProjectCard.svelte";
-import projects from "../assets/projects.json"
+import ProjectCard from "../../components/ProjectCard.svelte";
+import projects from "../../assets/projects.json"
 </script>
 
 <svelte:head>

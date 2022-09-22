@@ -52,7 +52,7 @@ import ToriiGate from "~icons/fa6-solid/torii-gate"
 import FaBrain from "~icons/fa6-solid/brain"
 import FaHome from "~icons/fa/home"
 
-import {dev} from "$app/env"
+import {dev} from "$app/environment"
 
 let navOpen = dev
 

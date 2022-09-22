@@ -1,7 +1,7 @@
 <script lang="ts">
     import * as THREE from "three"
     import { onMount, onDestroy } from "svelte";
-    import {browser} from "$app/env"
+    import {browser} from "$app/environment"
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(70, 1/1)
