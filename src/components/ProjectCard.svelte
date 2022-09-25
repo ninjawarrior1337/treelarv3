@@ -8,7 +8,7 @@ export let project: {
     links?: string[];
 } = {}
 
-$: descriptionMd = marked(project.description)
+$: descriptionMd = marked(project.description||"")
 </script>
 
 <div class="w-10/12 mx-auto p-8 my-16 shadow-xl bg-gray-800 rounded-sm">
@@ -32,7 +32,6 @@ $: descriptionMd = marked(project.description)
         {#each project.links || [] as link}    
             <a
                 class="text-2xl font-bold mx-2 mt-4 underline"
-                v-for="link of links"
                 href={link.split('=')[1]}
                 rel="noopener"
                 target="_blank"
