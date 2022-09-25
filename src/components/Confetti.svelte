@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+    import { onMount, onDestroy } from "svelte";
     import confetti from "canvas-confetti";
     import { browser } from "$app/environment";
 
@@ -9,9 +9,11 @@
         return Math.random() * (max - min) + min;
     };
 
+    let interval = 0
+
     onMount(async () => {
         if (colors.length > 0 && browser) {
-            window.setInterval(() => {
+            interval = window.setInterval(() => {
                 confetti({
                     particleCount: 1,
                     startVelocity: 0,
@@ -29,6 +31,10 @@
             }, 10);
         }
     });
+
+    onDestroy(() => {
+        clearInterval(interval)
+    })
 </script>
 
 <div />

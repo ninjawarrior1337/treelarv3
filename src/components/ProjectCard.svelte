@@ -16,7 +16,7 @@ $: descriptionMd = marked(project.description||"")
         {#if project.img}
             <img
                 src={project.img}
-                class="w-32 mx-auto pb-4 object-contain lg:order-last lg:mx-2 lg:h-full"
+                class="w-32 px-2 mx-auto pb-4 object-contain lg:order-last"
                 alt={project.title+' logo'}
             >
         {/if}
