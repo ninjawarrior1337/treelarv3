@@ -6,7 +6,7 @@
     export let data: (import("./$types").PageData)
 
     onMount(async () => {
-        Logo3D = (await import("../components/Logo3D.svelte")).default
+        Logo3D = (await import("../components/Logo.svelte")).default
     })
 
     const colorTable = {
