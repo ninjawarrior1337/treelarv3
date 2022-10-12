@@ -45,8 +45,9 @@
    },
    {
       "title": "lovelive-hd-ur-*",
-      "description": "I wrote this just so I could get waifu2xed wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 3 different languages (Typescript, Kotlin, and Go).",
+      "description": "I wrote this just so I could get waifu2xed wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 4 different languages (Rust, Typescript, Kotlin, and Go).",
       "links": [
+         "Rust=https://github.com/ninjawarrior1337/lovelive-hd-ur-rs",
          "TS/JS=https://github.com/ninjawarrior1337/love-live-hd-ur-server",
          "Kotlin=https://github.com/ninjawarrior1337/lovelive-hd-ur-server-spring",
          "Go=https://github.com/ninjawarrior1337/lovelive-hd-ur-go"
