@@ -26,6 +26,7 @@
             </a>
             <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://anilist.co/user/Treelar"
                 class="grid place-items-center text-white lg:text-lg text-xl bg-gray-800 px-2"
             >

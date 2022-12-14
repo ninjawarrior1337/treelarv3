@@ -30,10 +30,10 @@
         <span class="text-gradient-treelar">Treelar</span>
     </div>
     <div class="space-x-4 py-2 text-2xl flex items-center justify-center">
-        <a rel="prefetch" target="_blank" href="https://github.com/ninjawarrior1337">
+        <a rel="prefetch noreferrer" target="_blank" href="https://github.com/ninjawarrior1337">
             <GithubLogo></GithubLogo>
         </a>
-        <a rel="prefetch" target="_blank" href="https://twitter.com/TYNROH">
+        <a rel="prefetch noreferrer" target="_blank" href="https://twitter.com/TYNROH">
             <TwitterLogo class="text-[#1DA1F2]"></TwitterLogo>
         </a>
     </div>

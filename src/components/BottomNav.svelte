@@ -35,18 +35,17 @@
   };
 </script>
 
-<div
+<button
   on:click={() => setNavState(!navOpen)}
   style:width={`${$navState.dim}rem`}
   style:height={`${$navState.dim}rem`}
-  class="select-none cursor-pointer shadow-xl border-2 fixed bottom-6 right-6 grid grid-cols-3 grid-rows-3 gap-2 bg-gradient-to-tr via-treelar to-treelar from-muse p-2 rounded text-white"
+  class="grid grid-cols-3 grid-rows-3 gap-2 select-none cursor-pointer shadow-xl border-2 fixed bottom-6 right-6 bg-gradient-to-tr via-treelar to-treelar from-muse p-2 rounded text-white [&>*]:w-full [&>*]:h-full"
 >
   {#if $navState.progress > 10}
       <a
           href="/"
           style:opacity={`${$navState.opacity}`}
           class="row-span-2 bg-black grid place-items-center content-center"
-          data-sveltekit-prefetch
       >
           <FaHome class="text-3xl" />
           <span>Home</span>
@@ -55,7 +54,6 @@
           href="/projects"
           style:opacity={`${$navState.opacity}`}
           class="row-span-2 bg-black grid place-items-center content-center"
-          data-sveltekit-prefetch
       >
           <FaBrain class="text-2xl" />
           <span>Projects</span>
@@ -67,9 +65,9 @@
       <a
           style:opacity={`${$navState.opacity}`}
           target="_blank"
+          rel="noreferrer"
           href="https://anilist.co/user/Treelar"
           class="col-span-2 bg-black grid grid-cols-2 justify-items-center items-center"
-          data-sveltekit-prefetch
       >
           <ToriiGate class="text-2xl" />
           <span>Anime</span>
@@ -79,4 +77,4 @@
           <div class="bg-black"></div>
       {/each}
   {/if}
-</div>
+</button>

@@ -33,7 +33,7 @@ $: descriptionMd = marked(project.description||"")
             <a
                 class="text-2xl font-bold mx-2 mt-4 underline"
                 href={link.split('=')[1]}
-                rel="noopener"
+                rel="noopener noreferrer"
                 target="_blank"
             >{link.split("=")[0]}</a>
         {/each}
