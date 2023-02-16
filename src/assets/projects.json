@@ -9,6 +9,15 @@
       ]
    },
    {
+      "title": "Geta",
+      "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._ (Temporary logo)",
+      "img": "/assets/projects/boushi.png",
+      "links": [
+         "Website=https://geta.v.treelar.xyz",
+         "GitHub=https://github.com/ninjawarrior1337/geta"
+      ]
+   },
+   {
       "title": "Ongaku",
       "description": "An [openings.moe](https://openings.moe) inspired website with more up to date openings and endings",
       "img": "/assets/projects/ongaku.png",
@@ -23,15 +32,6 @@
       "img": "/assets/projects/boushi.png",
       "links": [
          "GitHub=https://github.com/ninjawarrior1337/boushi"
-      ]
-   },
-   {
-      "title": "Geta",
-      "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._ (Temporary logo)",
-      "img": "/assets/projects/boushi.png",
-      "links": [
-         "Website=https://geta.v.treelar.xyz",
-         "GitHub=https://github.com/ninjawarrior1337/geta"
       ]
    },
    {
