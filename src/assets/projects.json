@@ -26,6 +26,15 @@
       ]
    },
    {
+      "title": "Geta",
+      "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._ (Temporary logo)",
+      "img": "/assets/projects/boushi.png",
+      "links": [
+         "Website=https://geta.v.treelar.xyz",
+         "GitHub=https://github.com/ninjawarrior1337/geta"
+      ]
+   },
+   {
       "title": "Mari",
       "img": "https://mari.v.treelar.xyz/mari.png",
       "description": "A peer-to-peer file sharing service that utilizes WebRTC and uses React for the frontend. This is a replacement for reep.io.",
