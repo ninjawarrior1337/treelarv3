@@ -11,12 +11,12 @@ export let project: {
 $: descriptionMd = marked(project.description||"")
 </script>
 
-<div class="w-10/12 mx-auto p-8 my-16 shadow-xl bg-gray-800 rounded-sm">
+<div class="w-10/12 mx-auto p-8 shadow-2xl bg-gradient-to-tr backdrop-blur-xl from-gray-700 to-gray-800 rounded-lg">
     <div class="flex flex-col lg:flex-row mb-4">
         {#if project.img}
             <img
                 src={project.img}
-                class="w-32 px-2 mx-auto pb-4 object-contain lg:order-last"
+                class="w-32 px-2 mx-auto pb-4 object-contain lg:order-last drop-shadow-xl"
                 alt={project.title+' logo'}
             >
         {/if}

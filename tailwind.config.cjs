@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,7 +12,10 @@ module.exports = {
         aqours: "#009fe8",
         niji: "#fab920",
         treelar: "#3399ff"
-      }
+      },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
     }
   }
 }

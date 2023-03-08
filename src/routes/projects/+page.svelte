@@ -1,5 +1,6 @@
 <template>
-    <div class="bg-gray-900 min-h-screen w-full">
+    <div class="bg-gray-900 min-h-screen w-full space-y-8 py-8">
+        <h1 class="w-full text-center font-bold text-4xl">Projects</h1>
         {#each projects as project}
             <ProjectCard project={project}></ProjectCard>
         {/each}
