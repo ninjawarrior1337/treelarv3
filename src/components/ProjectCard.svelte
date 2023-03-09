@@ -11,12 +11,12 @@ export let project: {
 $: descriptionMd = marked(project.description||"")
 </script>
 
-<div class="w-10/12 mx-auto p-8 shadow-2xl bg-gradient-to-tr backdrop-blur-xl from-gray-700 to-gray-800 rounded-lg">
+<div class="w-11/12 p-8 shadow-2xl bg-gradient-to-tr backdrop-blur-xl from-gray-700 to-gray-800 rounded-lg">
     <div class="flex flex-col lg:flex-row mb-4">
         {#if project.img}
             <img
                 src={project.img}
-                class="w-32 px-2 mx-auto pb-4 object-contain lg:order-last drop-shadow-xl"
+                class="w-40 p-4 mx-auto object-contain lg:order-last drop-shadow-xl aspect-square rounded-lg shadow-xl"
                 alt={project.title+' logo'}
             >
         {/if}
@@ -27,7 +27,7 @@ $: descriptionMd = marked(project.description||"")
         <div class="flex-grow"></div>
     </div>
     <div
-        class="flex items-center justify-end h-full mt-4 border-t-4 border-blue-500"
+        class="flex items-center justify-end mt-4 border-t-4 border-blue-500"
     >
         {#each project.links || [] as link}    
             <a

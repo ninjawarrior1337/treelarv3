@@ -48,13 +48,13 @@
       "description": "A Mario-like game that was supposed to be that you reset Mario levels but just ended up being a mario clone.",
       "img": "/assets/projects/alejandro.png",
       "links": [
-         "Reverse=https://reverse.v.treelar.xyz",
+         "Reverse=https://fs.treelar.xyz/reverse",
          "GitHub=https://github.com/ReverseDevTeam/ReverseGame"
       ]
    },
    {
       "title": "lovelive-hd-ur-*",
-      "description": "I wrote this just so I could get waifu2xed wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 4 different languages (Rust, Typescript, Kotlin, and Go).",
+      "description": "I wrote this just so I could get AI upscaled wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 4 different languages (Rust, Typescript, Kotlin, and Go).",
       "links": [
          "Rust=https://github.com/ninjawarrior1337/lovelive-hd-ur-rs",
          "TS/JS=https://github.com/ninjawarrior1337/love-live-hd-ur-server",
@@ -71,9 +71,9 @@
    },
    {
       "title": "This Website",
-      "description": "Yah, I don't know what else to say about this one.",
+      "description": "Yeah, I don't know what else to say about this one.",
       "links": [
-         "Why would you need this link=https://treelar.xyz"
+         "treelar.xyz=https://treelar.xyz"
       ]
    }
 ]
