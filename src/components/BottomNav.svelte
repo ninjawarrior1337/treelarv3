@@ -45,7 +45,7 @@
       <a
           href="/"
           style:opacity={`${$navState.opacity}`}
-          class="row-span-2 bg-black grid place-items-center content-center"
+          class="row-span-2 bg-black grid gap-4 place-items-center content-center"
       >
           <FaHome class="text-3xl" />
           <span>Home</span>
@@ -53,7 +53,7 @@
       <a
           href="/projects"
           style:opacity={`${$navState.opacity}`}
-          class="row-span-2 bg-black grid place-items-center content-center"
+          class="row-span-2 bg-black grid gap-4 place-items-center content-center"
       >
           <FaBrain class="text-2xl" />
           <span>Projects</span>

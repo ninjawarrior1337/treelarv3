@@ -13,7 +13,7 @@
             <a
                 data-sveltekit-prefetch
                 href="/"
-                class="grid place-items-center text-gray-200 text-white lg:text-lg text-xl bg-gray-800 px-2"
+                class="grid place-items-center text-white lg:text-lg text-xl bg-gray-800 px-2"
             >
                 Home
             </a>
