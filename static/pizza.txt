@@ -1,0 +1,74 @@
+**For all items, omit if not available when ordering**
+
+For my Blaze Pizza order ill have,
+an 11 inch
+classic dough
+red sauced pizza.
+
+for cheeses ill have,
+shredded mozzarella,
+gorgonzola,
+fresh mozzarella,
+parmesean,
+ricotta,
+goat cheese.
+
+for meats ill have,
+bacon,
+meatballs
+chicken,
+sausage,
+pepperoni.
+
+for veggies ill have,
+banana peppers,
+black olives,
+tomatoes
+basil
+kalamata olives,
+mushrooms,
+onions,
+roasted garlic.
+
+for finishes ill have,
+olive oil,
+pesto drizzle,
+buttermilk on the side,
+arugula,
+sea salt,
+oregano.
+
+If you are planning on getting two pizzas, on the other ill have
+an 11 inch
+classic dough
+red sauced pizza.
+
+for cheeses ill have,
+gorgonzola,
+ovalini mozzarella,
+parmesean,
+goat cheese.
+
+for meats ill have,
+bacon,
+meatballs
+chicken,
+sausage,
+pepperoni.
+
+for veggies ill have,
+black olives,
+tomatoes
+basil
+kalamata olives,
+mushrooms,
+roasted red peppers,
+onions,
+roasted garlic.
+
+for finishes ill have,
+oregano,
+pesto drizzle,
+argula,
+balsamic glaze
+sea salt.
