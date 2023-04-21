@@ -12,7 +12,7 @@
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
         React: ["#00d8ff", "https://reactjs.org/"],
-        ラブライブ: [
+        ラブライバー: [
             "#e4007f",
             "https://love-live.fandom.com/wiki/Main_Page",
         ],
@@ -23,8 +23,9 @@
         IPFS: ["#69c4cd", "https://ipfs.io/"],
         Arch: ["#1793D1", "https://archlinux.org"],
         本: ["#ff0000", ""],
-        TOH: ["#AF6F2C", "https://theowlhouse.fandom.com"],
-        Amphibia: ["#11A77D", "https://amphibia.fandom.com/wiki/Amphibia_Wiki"]
+        TOH: ["#AF6F2C","https://theowlhouse.fandom.com"],
+        Amphibia: ["#11A77D", "https://amphibia.fandom.com/wiki/Amphibia_Wiki"],
+        software: ["#3399ff", "/projects"]
     };
     const colorText = (input: String): String => {
         var finalStr = input;
@@ -56,18 +57,24 @@
             <span>Hi, I'm</span>
             <span class="text-gradient-treelar cursor-pointer">Treelar</span>
         </h1>
-        <h2 class="text-2xl lg:text-4xl">
-            {@html colorText("日本語勉強中")}
-        </h2>
-        <h2 class="text-2xl lg:text-4xl">
-            {@html colorText("Svelte / Vue / React")}
-        </h2>
-        <h2 class="text-2xl lg:text-4xl">
-            {@html colorText("ラブライブ / TOH / Amphibia")}
-        </h2>
-        <h2 class="text-2xl lg:text-4xl">
-            {@html colorText("I use Arch btw")}
-        </h2>
+        <div class="text-2xl lg:text-4xl space-y-2">
+            <h2>
+                I write software
+            </h2>
+            <h2>
+                {@html colorText("日本語勉強中")}
+            </h2>
+            <h2>
+                {@html colorText("Svelte / Vue / React")}
+            </h2>
+            <h2>
+                {@html colorText("ラブライバー")}
+            </h2>
+            <h2>
+                {@html colorText("I use Arch btw")}
+            </h2>
+        </div>
+        
 
         {#if data.idol}
         <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {data.idol.color}">
