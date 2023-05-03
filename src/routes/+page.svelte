@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
 
-    let Logo3D
+    let Logo3D: any
 
     export let data: (import("./$types").PageData)
 

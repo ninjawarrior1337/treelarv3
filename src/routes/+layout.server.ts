@@ -1,20 +1,14 @@
-const TOKUBETSU_URL = "https://mei.treelar.xyz/tokubetsu"
+import {trpc} from "../trpc"
+import type { Character } from "mei"
 
-const getBirthdayIdol = async (): Promise<Idol | null> => {
-    try {
-        const res = await fetch(TOKUBETSU_URL)
-        const data = await res.json()
-
-        return data as Idol
-    } catch{
-        return null
-    }
-
+const getBirthdayIdol = () => {
+    return trpc.tokubetsu.birthdayToday.query() as Promise<Character>
 }
 
-export const load: (import("./$types").LayoutServerLoad) = () => {
+export const load: (import("./$types").LayoutServerLoad) = async () => {
     let idol = getBirthdayIdol()
     return {
-        idol
+        idol,
+        hello: trpc.hello.query()
     }
 }
