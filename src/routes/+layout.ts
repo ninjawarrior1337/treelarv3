@@ -5,7 +5,7 @@ const getBirthdayIdol = () => {
     return trpc.tokubetsu.birthdayToday.query() as Promise<Character>
 }
 
-export const load: (import("./$types").LayoutServerLoad) = async () => {
+export const load: (import("./$types").LayoutLoad) = async () => {
     let idol = getBirthdayIdol()
     return {
         idol,

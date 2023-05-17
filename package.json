@@ -2,9 +2,9 @@
   "name": "treelarv3",
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite dev --port 1234 --host",
+    "dev": "vite dev --host",
     "build": "vite build",
-    "preview": "vite preview --port 1234",
+    "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
