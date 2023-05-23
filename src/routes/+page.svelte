@@ -1,13 +1,8 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import Logo from "../components/Logo.svelte";
 
-    let Logo3D: any
-
-    export let data: (import("./$types").PageData)
-
-    onMount(async () => {
-        Logo3D = (await import("../components/Logo.svelte")).default
-    })
+    import {IdolStore} from "./store"
 
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
@@ -47,11 +42,7 @@
 </svelte:head>
 
 <div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen">
-    {#if Logo3D}
-        <svelte:component this={Logo3D}></svelte:component>
-    {:else}
-        <div class="lg:order-last w-[450px] h-[450px]"></div>
-    {/if}
+    <Logo/>
     <div class="mx-16 space-y-2">
         <h1 class="text-4xl lg:text-6xl mb-4 pb-4">
             <span>Hi, I'm</span>
@@ -76,9 +67,9 @@
         </div>
         
 
-        {#if data.idol}
-        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {data.idol.color}">
-            Happy Birthday {data.idol.name}!
+        {#if $IdolStore}
+        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {$IdolStore.color}">
+            Happy Birthday {$IdolStore.name}!
         </h2>
         {/if}
     </div>
