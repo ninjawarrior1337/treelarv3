@@ -9,9 +9,13 @@
         return Math.random() * (max - min) + min;
     };
 
-    let interval = 0
+    let interval: number | undefined
 
-    onMount(async () => {
+    $: {
+        if(interval) {
+            clearInterval(interval)
+        }
+        
         if (colors.length > 0 && browser) {
             interval = window.setInterval(() => {
                 confetti({
@@ -30,7 +34,7 @@
                 });
             }, 10);
         }
-    });
+    }
 
     onDestroy(() => {
         clearInterval(interval)
