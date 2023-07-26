@@ -12,7 +12,7 @@
     "@iconify/json": "^2.2.84",
     "@sveltejs/adapter-auto": "1.0.0",
     "@sveltejs/adapter-vercel": "1.0.0",
-    "@sveltejs/kit": "1.21.0",
+    "@sveltejs/kit": "1.22.3",
     "@types/canvas-confetti": "^1.6.0",
     "@types/howler": "^2.2.7",
     "@types/marked": "^4.3.1",
