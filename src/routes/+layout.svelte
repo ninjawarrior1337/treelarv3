@@ -1,5 +1,4 @@
 <script lang="ts">
-import type { Character } from "mei";
 import BottomNav from "../components/BottomNav.svelte";
 import Confetti from "../components/Confetti.svelte";
 import Footer from "../components/Footer.svelte";

@@ -1,9 +1,12 @@
 import { readable, writable } from "svelte/store";
 import { trpc } from "../trpc";
-import type { Character } from "mei";
+import type { inferRouterOutputs } from "@trpc/server";
+import type { AppRouter } from "mei";
 
-export const IdolStore = readable<Character|null>(null, (set) => {
-    const data = trpc.tokubetsu.birthdayToday.query() as Promise<Character|null> 
+type RouterOutput = inferRouterOutputs<AppRouter>;
+
+export const IdolStore = readable<RouterOutput["tokubetsu"]["birthdayToday"]>(null, (set) => {
+    const data = trpc.tokubetsu.birthdayToday.query()
 
     data.then((c) => {
         set(c)

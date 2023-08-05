@@ -28,8 +28,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@trpc/client": "^10.33.0",
-    "@trpc/server": "^10.33.0",
+    "@trpc/client": "^10.37.1",
+    "@trpc/server": "^10.37.1",
     "canvas-confetti": "^1.6.0",
     "howler": "^2.2.3",
     "marked": "^4.3.0",
