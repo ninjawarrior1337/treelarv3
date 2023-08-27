@@ -17,6 +17,7 @@
         ETH: ["#8c92b2", "https://ethereum.org/"],
         IPFS: ["#69c4cd", "https://ipfs.io/"],
         Arch: ["#1793D1", "https://archlinux.org"],
+        Fedora: ["#3c6eb4", "https://fedoraproject.org"],
         本: ["#ff0000", ""],
         TOH: ["#AF6F2C","https://theowlhouse.fandom.com"],
         Amphibia: ["#11A77D", "https://amphibia.fandom.com/wiki/Amphibia_Wiki"],
@@ -62,7 +63,7 @@
                 {@html colorText("ラブライバー")}
             </h2>
             <h2>
-                {@html colorText("I use Arch btw")}
+                {@html colorText("I use Fedora / macOS")}
             </h2>
         </div>
         
