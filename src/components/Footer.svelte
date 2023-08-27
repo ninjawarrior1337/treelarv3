@@ -3,7 +3,8 @@
     import faHeart from "~icons/fa/heart"
     import ethLogo from "~icons/fa6-brands/ethereum"
     import GithubLogo from "~icons/fa6-brands/github"
-    import TwitterLogo from "~icons/fa6-brands/twitter"
+    import TwitterLogo from "~icons/fa6-brands/x-twitter"
+    import MastodonLogo from "~icons/fa6-brands/mastodon"
     import {page} from "$app/stores"
 
     const computeIcon = (path: string) => {
@@ -34,7 +35,10 @@
             <GithubLogo></GithubLogo>
         </a>
         <a rel="prefetch noreferrer" target="_blank" href="https://twitter.com/TYNROH">
-            <TwitterLogo class="text-[#1DA1F2]"></TwitterLogo>
+            <TwitterLogo class="text-gray-800"></TwitterLogo>
+        </a>
+        <a rel="me" href="https://mastodon.social/@treelar" target="_blank">
+            <MastodonLogo></MastodonLogo>
         </a>
     </div>
 </div>
