@@ -6,7 +6,7 @@ import preprocess from "svelte-preprocess"
 const config = {
     preprocess: preprocess(),
     kit: {
-        adapter: process.env["VERCEL"] ? vercel({edge: true}) : auto(),
+        adapter: process.env["VERCEL"] ? vercel({runtime: "edge"}) : auto(),
         inlineStyleThreshold: 5000
     }
 }
