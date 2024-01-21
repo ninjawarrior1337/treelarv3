@@ -1,6 +1,11 @@
-export function GET() {
+import { RequestHandler } from "@sveltejs/kit"
+
+export const GET: RequestHandler = ({url}) => {
+    const resource = url.searchParams.get("resource")
+
+    // if(resource?.includes(""))
     const webfinger = {
-        "subject": "acct:treelar@mastodon.social",
+        "subject": "me@treelar.xyz",
         "aliases": [
           "https://mastodon.social/@treelar",
           "https://mastodon.social/users/treelar"
@@ -19,8 +24,12 @@ export function GET() {
           {
             "rel": "http://ostatus.org/schema/1.0/subscribe",
             "template": "https://mastodon.social/authorize_interaction?uri={uri}"
+          },
+          {
+            "rel": "http://openid.net/specs/connect/1.0/issuer",
+            "href": "https://git.treelar.xyz/"
           }
-        ]
+        ],
       }
     return new Response(
         JSON.stringify(webfinger), {
