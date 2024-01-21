@@ -3,9 +3,8 @@ import { RequestHandler } from "@sveltejs/kit"
 export const GET: RequestHandler = ({url}) => {
     const resource = url.searchParams.get("resource")
 
-    // if(resource?.includes(""))
     const webfinger = {
-        "subject": "me@treelar.xyz",
+        "subject": "acct:me@treelar.xyz",
         "aliases": [
           "https://mastodon.social/@treelar",
           "https://mastodon.social/users/treelar"
