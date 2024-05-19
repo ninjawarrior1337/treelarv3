@@ -1,8 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import Logo from "../components/Logo.svelte";
+    import FaMusic from "~icons/fa/music"
 
     import {IdolStore} from "./store"
+    import { trpc } from "../trpc";
 
     const colorTable = {
         Vue: ["#41B883", "https://vuejs.org"],
@@ -57,10 +59,7 @@
                 {@html colorText("日本語勉強中")}
             </h2>
             <h2>
-                {@html colorText("Svelte / Vue / React")}
-            </h2>
-            <h2>
-                {@html colorText("ラブライバー")}
+                {@html colorText("Svelte / React / Vue")}
             </h2>
             <h2>
                 {@html colorText("I use Fedora / macOS")}

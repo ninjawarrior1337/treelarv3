@@ -11,10 +11,19 @@
    {
       "title": "Geta",
       "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._ (Temporary logo)",
-      "img": "/assets/projects/boushi.png",
+      "logoChar": "駄",
       "links": [
          "Website=https://geta.v.treelar.xyz",
          "GitHub=https://github.com/ninjawarrior1337/geta"
+      ]
+   },
+   {
+      "title": "Ki",
+      "description": "A mood tracker inspired by bytesbybianca/mood-tracker and built with the T3 stack",
+      "logoChar": "気",
+      "links": [
+         "Website=https://t3.v.treelar.xyz",
+         "GitHub=https://github.com/ninjawarrior1337/ki"
       ]
    },
    {
