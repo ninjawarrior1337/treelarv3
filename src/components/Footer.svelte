@@ -34,7 +34,7 @@
         <a rel="prefetch noreferrer" target="_blank" href="https://github.com/ninjawarrior1337">
             <GithubLogo></GithubLogo>
         </a>
-        <a rel="prefetch noreferrer" target="_blank" href="https://twitter.com/TYNROH">
+        <a rel="prefetch noreferrer" target="_blank" href="https://twitter.com/treeelar">
             <TwitterLogo class="text-gray-800"></TwitterLogo>
         </a>
         <a rel="me" href="https://mastodon.social/@treelar" target="_blank">
