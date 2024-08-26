@@ -6,7 +6,7 @@
     import {IdolStore} from "./store"
     import { trpc } from "../trpc";
 
-    const colorTable = {
+    const colorTable: {[k: string]: [string, string]} = {
         Vue: ["#41B883", "https://vuejs.org"],
         React: ["#00d8ff", "https://reactjs.org/"],
         ラブライバー: [
@@ -19,6 +19,7 @@
         ETH: ["#8c92b2", "https://ethereum.org/"],
         IPFS: ["#69c4cd", "https://ipfs.io/"],
         Arch: ["#1793D1", "https://archlinux.org"],
+        NixOS: ["#7EBAE4", "https://nixos.org"],
         Fedora: ["#3c6eb4", "https://fedoraproject.org"],
         本: ["#ff0000", ""],
         TOH: ["#AF6F2C","https://theowlhouse.fandom.com"],
@@ -62,7 +63,7 @@
                 {@html colorText("Svelte / React / Vue")}
             </h2>
             <h2>
-                {@html colorText("I use Fedora / macOS")}
+                {@html colorText("I use Arch / macOS / NixOS")}
             </h2>
         </div>
         
