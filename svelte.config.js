@@ -1,5 +1,6 @@
 import auto from "@sveltejs/adapter-auto"
 import vercel from "@sveltejs/adapter-vercel"
+import node from "@sveltejs/adapter-node"
 import preprocess from "svelte-preprocess"
 import process from "node:process"
 
@@ -7,7 +8,7 @@ import process from "node:process"
 const config = {
     preprocess: preprocess(),
     kit: {
-        adapter: process.env["VERCEL"] ? vercel({runtime: "edge"}) : auto(),
+        adapter: process.env["VERCEL"] ? vercel({runtime: "edge"}) : process.env["IN_NIX"] ? node() : auto(),
         inlineStyleThreshold: 5000
     }
 }
