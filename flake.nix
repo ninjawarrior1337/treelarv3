@@ -11,7 +11,11 @@
     nixpkgs,
     flake-utils,
   }:
-    flake-utils.lib.eachDefaultSystem (system: let
+    {
+      nixosModules.treelarv3 = import ./nixosModule.nix {inherit self;};
+      nixosModules.default = self.nixosModules.treelarv3;
+    }
+    // flake-utils.lib.eachDefaultSystem (system: let
       pkgs = import nixpkgs {
         inherit system;
       };
@@ -64,5 +68,31 @@
       };
 
       packages.default = treelarv3;
+
+      checks = {
+        treelarv3ServerTest = pkgs.nixosTest {
+          name = "treelarv3-boots";
+          nodes.machine = {
+            config,
+            pkgs,
+            ...
+          }: {
+            imports = [
+              self.nixosModules.default
+            ];
+
+            services.treelarv3 = {
+              enable = true;
+            };
+
+            system.stateVersion = "24.05";
+          };
+
+          testScript = ''
+            machine.wait_for_unit("treelarv3.service")
+            machine.wait_for_open_port(8080)
+          '';
+        };
+      };
     });
 }
