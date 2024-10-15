@@ -35,7 +35,6 @@
     "howler": "^2.2.4",
     "marked": "^4.3.0",
     "mei": "github:ninjawarrior1337/mei",
-    "pusher-js": "^7.6.0",
     "three": "^0.143.0",
     "unplugin-icons": "^0.14.15"
   }
