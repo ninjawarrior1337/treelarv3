@@ -1,19 +1,26 @@
 <script lang="ts">
-import BottomNav from "../components/BottomNav.svelte";
-import Confetti from "../components/Confetti.svelte";
-import Footer from "../components/Footer.svelte";
-import "../styles.css"
+    import BottomNav from "../components/BottomNav.svelte";
+    import Confetti from "../components/Confetti.svelte";
+    import Footer from "../components/Footer.svelte";
+    import "../styles.css"
 
-import {IdolStore} from "./store"
+    import {useIdolStore} from "./store.svelte"
+        interface Props {
+        children?: import('svelte').Snippet;
+    }
 
-$: colors = $IdolStore?.color ? [$IdolStore?.color] : []
+    let idolData = useIdolStore()
+
+    let { children }: Props = $props();
+
+    let colors = $derived(idolData.data?.color ? [idolData.data?.color] : [])
 
 </script>
 
 <template>
     <div class="min-h-screen overflow-x-hidden text-white bg-gray-900">
         <Confetti colors={colors}></Confetti>
-        <slot></slot>
+        {@render children?.()}
         <BottomNav></BottomNav>
         <Footer></Footer>
     </div>

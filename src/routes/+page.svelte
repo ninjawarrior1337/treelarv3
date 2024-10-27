@@ -3,7 +3,7 @@
     import Logo from "../components/Logo.svelte";
     import FaMusic from "~icons/fa/music"
 
-    import {IdolStore} from "./store"
+    import {useIdolStore} from "./store.svelte"
     import { trpc } from "../trpc";
 
     const colorTable: {[k: string]: [string, string]} = {
@@ -38,6 +38,8 @@
         }
         return finalStr;
     };
+
+    const idolData = useIdolStore()
 </script>
 
 <svelte:head>
@@ -68,9 +70,9 @@
         </div>
         
 
-        {#if $IdolStore}
-        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {$IdolStore.color}">
-            Happy Birthday {$IdolStore.name}!
+        {#if idolData.data}
+        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {idolData.data.color}">
+            Happy Birthday {idolData.data.name}!
         </h2>
         {/if}
     </div>

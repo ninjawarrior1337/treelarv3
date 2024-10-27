@@ -1,44 +1,50 @@
 <script lang="ts">
-    import { onMount, onDestroy } from "svelte";
-    import confetti from "canvas-confetti";
-    import { browser } from "$app/environment";
+  import { run } from "svelte/legacy";
 
-    export let colors: string[];
+  import { onMount, onDestroy } from "svelte";
+  import confetti from "canvas-confetti";
+  import { browser } from "$app/environment";
 
-    const randomInRange = (min: number, max: number) => {
-        return Math.random() * (max - min) + min;
-    };
+  interface Props {
+    colors: string[];
+  }
 
-    let interval: number | undefined
+  let { colors }: Props = $props();
 
-    $: {
-        if(interval) {
-            clearInterval(interval)
-        }
-        
-        if (colors.length > 0 && browser) {
-            interval = window.setInterval(() => {
-                confetti({
-                    particleCount: 1,
-                    startVelocity: 0,
-                    ticks: 500,
-                    origin: {
-                        x: Math.random(),
-                        y: Math.random() - 0.5,
-                    },
-                    colors: colors,
-                    shapes: ["square", "circle"],
-                    gravity: randomInRange(0.4, 0.6),
-                    scalar: randomInRange(0.4, 1),
-                    drift: randomInRange(-0.4, 0.4),
-                });
-            }, 10);
-        }
+  const randomInRange = (min: number, max: number) => {
+    return Math.random() * (max - min) + min;
+  };
+
+  let interval: number | undefined = $state();
+
+  $effect(() => {
+    if (interval) {
+      clearInterval(interval);
     }
 
-    onDestroy(() => {
-        clearInterval(interval)
-    })
+    if (colors.length > 0 && browser) {
+      interval = window.setInterval(() => {
+        confetti({
+          particleCount: 1,
+          startVelocity: 0,
+          ticks: 500,
+          origin: {
+            x: Math.random(),
+            y: Math.random() - 0.5,
+          },
+          colors: colors,
+          shapes: ["square", "circle"],
+          gravity: randomInRange(0.4, 0.6),
+          scalar: randomInRange(0.4, 1),
+          drift: randomInRange(-0.4, 0.4),
+        });
+      }, 10);
+    }
+  });
+
+  onDestroy(() => {
+    clearInterval(interval);
+  });
 </script>
 
-<div />
+<div></div>

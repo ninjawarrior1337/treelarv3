@@ -1,81 +1,85 @@
 <script lang="ts">
-    import { Howl, Howler } from "howler";
-    import { onDestroy, onMount } from "svelte";
+  import { run } from "svelte/legacy";
 
-    let boom;
-    let selectedInterval = 2;
-    let booming = false;
-    let currentTimeout: number;
+  import { Howl, Howler } from "howler";
+  import { onDestroy, onMount } from "svelte";
 
-    const randomN = (n: number) => {
-        return Math.floor(Math.random() * n);
-    };
+  let boom: Howl = $state(
+    new Howl({
+      src: ["/assets/boom/boom.mp3"],
+      html5: true,
+    })
+  );
 
-    const playBoom = () => {
-        if (!boom) {
-            boom = new Howl({
-                src: ["/assets/boom/boom.mp3"],
-                html5: true,
-            });
-        }
-        boom.play();
-    };
+  let selectedInterval = $state(2);
+  let booming = $state(false);
+  let currentTimeout: number | undefined = $state();
 
-    const toggleBooming = () => {
-        if (booming) {
-            removeTimeout();
-        } else {
-            registerTimeout();
-        }
-    };
+  const randomN = (n: number) => {
+    return Math.floor(Math.random() * n);
+  };
 
-    const registerTimeout = () => {
-        currentTimeout = window.setTimeout(() => {
-            playBoom();
-            registerTimeout();
-        }, randomN(selectedInterval) * 1000);
-        booming = true;
-    };
+  const playBoom = () => {
+    boom.play();
+  };
 
-    const removeTimeout = () => {
+  const startBooming = (interval: number) => {
+    removeTimeout()
+    currentTimeout = window.setTimeout(
+      () => {
+        playBoom();
+        startBooming(interval);
+      },
+      randomN(interval) * 1000
+    );
+    booming = true;
+  };
+
+  const removeTimeout = () => {
+    if(currentTimeout) {
         window.clearTimeout(currentTimeout);
         booming = false;
-    };
-
-    $: {
-        selectedInterval;
-        if (booming) {
-            removeTimeout();
-            registerTimeout();
-        }
     }
+  };
 
-    onDestroy(() => {
-        removeTimeout();
-    });
+  $effect(() => {
+    if(!booming) {
+        removeTimeout()
+    }
+  });
+
+  onDestroy(() => {
+    removeTimeout();
+  });
 </script>
 
 <div class="grid w-screen h-screen place-items-center content-center space-y-4">
-    <button class="bg-treelar text-4xl rounded p-2" on:click={playBoom}>
-        Boom Now
-    </button>
-    <div />
-    <span
-        >Boom Interval (Boom at least once sometime in the next {selectedInterval}
-        seconds from the previous boom)</span
-    >
-    <input
-        class="bg-gray-800 border-2 rounded p-2"
-        placeholder="Boom Interval"
-        type="number"
-        min="2"
-        bind:value={selectedInterval}
-    />
-    <button class="bg-muse text-5xl rounded p-4" on:click={toggleBooming}>
-        {#if booming}
-            Stop Booms
-        {:else}
-            Start Booms
-        {/if}
-    </button>
+  <button class="bg-treelar text-4xl rounded p-2" onclick={playBoom}>
+    Boom Now
+  </button>
+  <div></div>
+  <span
+    >Boom Interval (Boom at least once sometime in the next {selectedInterval}
+    seconds from the previous boom)</span
+  >
+  <input
+    class="bg-gray-800 border-2 rounded p-2"
+    placeholder="Boom Interval"
+    type="number"
+    min="2"
+    bind:value={selectedInterval}
+  />
+  <button class="bg-muse text-5xl rounded p-4" onclick={() => {
+    if(!booming) {
+        startBooming(selectedInterval)
+    } else {
+        booming = false;
+    }
+  }}>
+    {#if booming}
+      Stop Booms
+    {:else}
+      Start Booms
+    {/if}
+  </button>
 </div>
