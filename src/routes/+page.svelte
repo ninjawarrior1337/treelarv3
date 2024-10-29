@@ -44,7 +44,6 @@
 
 <svelte:head>
     <title>Treelar</title>
-    <link rel="preload" href="/logo2020.glb" as="fetch" crossorigin="anonymous">
 </svelte:head>
 
 <div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen">

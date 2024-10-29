@@ -18,10 +18,6 @@
   let interval: number | undefined = $state();
 
   $effect(() => {
-    if (interval) {
-      clearInterval(interval);
-    }
-
     if (colors.length > 0 && browser) {
       interval = window.setInterval(() => {
         confetti({
@@ -43,7 +39,9 @@
   });
 
   onDestroy(() => {
-    clearInterval(interval);
+    if(interval) {
+      clearInterval(interval);
+    }
   });
 </script>
 
