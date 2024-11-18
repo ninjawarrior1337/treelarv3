@@ -64,7 +64,7 @@
                 {@html colorText("Svelte / React / Vue")}
             </h2>
             <h2>
-                {@html colorText("I use Arch / macOS / NixOS")}
+                {@html colorText("I use NixOS / macOS ")}
             </h2>
         </div>
         
