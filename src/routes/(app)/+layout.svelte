@@ -1,10 +1,10 @@
 <script lang="ts">
-    import BottomNav from "../components/BottomNav.svelte";
-    import Confetti from "../components/Confetti.svelte";
-    import Footer from "../components/Footer.svelte";
-    import "../styles.css"
+    import BottomNav from "@/components/BottomNav.svelte";
+    import Confetti from "@/components/Confetti.svelte";
+    import Footer from "@/components/Footer.svelte";
+    import "../../styles.css"
 
-    import {useIdolStore} from "./store.svelte"
+    import {useIdolStore} from "../store.svelte"
         interface Props {
         children?: import('svelte').Snippet;
     }

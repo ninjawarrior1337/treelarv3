@@ -17,7 +17,7 @@
 </script>
 
 <div
-  class="h-full w-11/12 flex flex-col justify-around p-8 shadow-2xl bg-gradient-to-tr backdrop-blur-xl from-gray-700 to-gray-800 rounded-lg"
+  class="h-full w-11/12 flex flex-col justify-around p-8 shadow-2xl bg-gradient-to-br backdrop-blur-xl from-gray-700 to-gray-800 rounded-lg"
 >
   <div class="flex flex-col lg:flex-row mb-4">
     {#if project.img}

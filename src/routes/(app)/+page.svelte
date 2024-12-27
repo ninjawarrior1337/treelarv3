@@ -1,10 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import Logo from "../components/Logo.svelte";
+    import Logo from "@/components/Logo.svelte";
     import FaMusic from "~icons/fa/music"
 
-    import {useIdolStore} from "./store.svelte"
-    import { trpc } from "../trpc";
+    import {useIdolStore} from "../store.svelte"
+    import { trpc } from "../../trpc";
 
     const colorTable: {[k: string]: [string, string]} = {
         Vue: ["#41B883", "https://vuejs.org"],
