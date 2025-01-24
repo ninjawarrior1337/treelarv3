@@ -37,10 +37,7 @@
 
         pnpmDeps = pkgs.pnpm.fetchDeps {
           inherit (finalAttrs) pname version src;
-          hash =
-            if pkgs.stdenv.isDarwin
-            then "sha256-smnQg/VppzNmMOxYe6phZ+TPS/9KXqh8iyhvK5rZE4E="
-            else "sha256-I7oJPqOEyKNbOmRgyX8qKyl0RbRRgHaDINaAfz8vYOE=";
+          hash = "sha256-ck3EzpiU3j+SPj9yEiU4NXP7/Ib+oQhlo1QQ28SHmnU=";
         };
 
         buildPhase = ''
