@@ -21,7 +21,7 @@
   let SvelteComponent = $derived(computeIcon($page.url.pathname));
 </script>
 
-<div class="bg-gradient-to-r from-muse via-treelar to-treelar h-1"></div>
+<div class="bg-linear-to-r from-muse via-treelar to-treelar h-1"></div>
 <div class="py-4 text-center w-full text-xl">
   <div class="flex items-center justify-center space-x-1">
     <span>Made with</span>

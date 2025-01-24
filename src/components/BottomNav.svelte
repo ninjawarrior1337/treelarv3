@@ -39,7 +39,7 @@
   onclick={() => setNavState(!navOpen)}
   style:width={`${$navState.dim}rem`}
   style:height={`${$navState.dim}rem`}
-  class="grid grid-cols-3 grid-rows-3 gap-2 select-none cursor-pointer shadow-xl border-2 fixed bottom-6 right-6 bg-gradient-to-tr via-treelar to-treelar from-muse p-2 rounded text-white [&>*]:w-full [&>*]:h-full"
+  class="grid grid-cols-3 grid-rows-3 gap-2 select-none cursor-pointer shadow-xl border-2 fixed bottom-6 right-6 bg-linear-to-tr via-treelar to-treelar from-muse p-2 rounded-sm text-white *:w-full *:h-full"
 >
   {#if $navState.progress > 10}
     <a

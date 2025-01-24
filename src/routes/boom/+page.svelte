@@ -1,8 +1,6 @@
 <script lang="ts">
-  import { run } from "svelte/legacy";
-
-  import { Howl, Howler } from "howler";
-  import { onDestroy, onMount } from "svelte";
+  import { Howl } from "howler";
+  import { onDestroy } from "svelte";
 
   let boom: Howl = $state(
     new Howl({
@@ -54,7 +52,7 @@
 </script>
 
 <div class="grid w-screen h-screen place-items-center content-center space-y-4">
-  <button class="bg-treelar text-4xl rounded p-2" onclick={playBoom}>
+  <button class="bg-treelar text-4xl rounded-sm p-2" onclick={playBoom}>
     Boom Now
   </button>
   <div></div>
@@ -63,13 +61,13 @@
     seconds from the previous boom)</span
   >
   <input
-    class="bg-gray-800 border-2 rounded p-2"
+    class="bg-gray-800 border-2 rounded-sm p-2"
     placeholder="Boom Interval"
     type="number"
     min="2"
     bind:value={selectedInterval}
   />
-  <button class="bg-muse text-5xl rounded p-4" onclick={() => {
+  <button class="bg-muse text-5xl rounded-sm p-4" onclick={() => {
     if(!booming) {
         startBooming(selectedInterval)
     } else {

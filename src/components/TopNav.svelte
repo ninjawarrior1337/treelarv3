@@ -50,6 +50,6 @@
       {/if}
     </div>
   </div>
-  <div class="bg-gradient-to-r from-muse via-treelar to-treelar h-1"></div>
+  <div class="bg-linear-to-r from-muse via-treelar to-treelar h-1"></div>
 </div>
 <div class="lg:h-8"></div>
