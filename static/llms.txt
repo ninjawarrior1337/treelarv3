@@ -1,0 +1,80 @@
+# Treelar's Website
+
+## Overview
+Personal website of Treelar, a software developer. The site showcases their projects, skills, and provides links to their social media presence.
+
+## Site Structure
+
+### Pages
+- **Home** (https://treelar.xyz/) - Main landing page with bio and introduction
+- **Projects** (https://treelar.xyz/projects) - Portfolio of software projects
+
+## About
+
+Treelar is a software developer who writes code and is currently learning Japanese (日本語勉強中).
+
+### Skills & Technologies
+- **Frontend Frameworks**: Svelte, React, Vue
+- **Operating Systems**: NixOS, macOS
+
+### Social Links
+- GitHub: https://github.com/ninjawarrior1337
+- Bluesky: https://bsky.app/profile/treelar.xyz
+- Mastodon: https://mastodon.social/@treelar
+- Twitter: https://twitter.com/treeelar
+- AniList: https://anilist.co/user/Treelar
+
+## Projects
+
+### Hanamaru
+A Go-based Discord bot with Japanese-learning utilities and image editing features.
+- Go package: https://pkg.go.dev/github.com/ninjawarrior1337/hanamaru-go
+- GitHub: https://github.com/ninjawarrior1337/hanamaru-go
+
+### Geta
+Split bill calculation app for going to restaurants in the US.
+- Website: https://geta.v.treelar.xyz/
+- GitHub: https://github.com/ninjawarrior1337/geta
+
+### Ki
+A mood tracker inspired by bytesbybianca/mood-tracker, built with the T3 stack.
+- Website: https://t3.v.treelar.xyz/
+- GitHub: https://github.com/ninjawarrior1337/ki
+
+### Ongaku
+An anime openings and endings website inspired by openings.moe, with more up-to-date content.
+- Website: https://ongaku.treelar.xyz/
+- GitHub: https://github.com/ninjawarrior1337/ongaku
+
+### Boushi
+A smartphone-controlled 2D array of LEDs on a graduation cap.
+- GitHub: https://github.com/ninjawarrior1337/boushi
+
+### Mari
+A peer-to-peer file sharing service utilizing WebRTC with React frontend. A replacement for reep.io.
+- Website: https://mari.treelar.cf/
+- GitHub: https://github.com/ninjawarrior1337/mari
+
+### Reverse Game
+A Mario-like game that started as a level reset concept but became a Mario clone.
+- Website: https://fs.treelar.xyz/reverse
+- GitHub: https://github.com/ReverseDevTeam/ReverseGame
+
+### lovelive-hd-ur-*
+AI upscaled wallpapers for Love Live cards. Originally written to get AI upscaled wallpapers by pressing a button on a phone. Rewritten in 4 different languages (Rust, TypeScript, Kotlin, and Go).
+- Rust: https://github.com/ninjawarrior1337/lovelive-hd-ur-rs
+- TS/JS: https://github.com/ninjawarrior1337/love-live-hd-ur-server
+- Kotlin: https://github.com/ninjawarrior1337/lovelive-hd-ur-server-spring
+- Go: https://github.com/ninjawarrior1337/lovelive-hd-ur-go
+
+### llwikiaapi
+An API for the Love Live Wikia Page, allowing access to lyrics and song information.
+- API: https://llwikia.v.treelar.xyz/
+
+### This Website
+The personal portfolio website itself, built with Svelte.
+- Source: https://treelar.xyz/
+
+## Contact
+
+The site does not have a dedicated contact page. For inquiries, social media links (GitHub, Bluesky, Mastodon, Twitter) can be used.
