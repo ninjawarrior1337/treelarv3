@@ -72,7 +72,7 @@
         {#if idolData.data}
         <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {idolData.data.color}">
             {#if idolData.data.name.includes("Miku") && idolData.data.birthday == "3/9"}
-            Happy {idolData.data.name} Day!
+            Happy {idolData.data.name.split(" ")[1]} Day!
             {:else}
             Happy Birthday {idolData.data.name}!
             {/if}
