@@ -4,7 +4,7 @@ import type { AppRouter } from "mei";
 
 type RouterOutput = inferRouterOutputs<AppRouter>;
 
-let birthdayToday: RouterOutput["tokubetsu"]["birthdayToday"] = $state(null);
+let birthdayToday = $state<RouterOutput["tokubetsu"]["birthdayToday"]>(null);
 
 export const useIdolStore = () => {
   $effect(() => {
