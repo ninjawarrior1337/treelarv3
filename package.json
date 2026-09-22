@@ -1,12 +1,27 @@
 {
   "name": "treelarv3",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "dependencies": {
+    "@trpc/client": "^11.8.1",
+    "@trpc/server": "^11.8.1",
+    "canvas-confetti": "^1.9.4",
+    "howler": "^2.2.4",
+    "marked": "^4.3.0",
+    "mei": "github:ninjawarrior1337/mei",
+    "three": "^0.143.0",
+    "unplugin-icons": "^0.19.3"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.424",
@@ -19,23 +34,15 @@
     "@types/canvas-confetti": "^1.9.0",
     "@types/howler": "^2.2.12",
     "@types/marked": "^4.3.2",
+    "@types/node": "^26.6.2",
     "@types/three": "^0.143.2",
+    "oxfmt": "^0.68.0",
+    "oxlint": "^1.83.0",
     "postcss": "^8.5.6",
     "svelte": "^5.46.1",
     "svelte-preprocess": "^6.0.3",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "vite": "^5.4.21"
-  },
-  "type": "module",
-  "dependencies": {
-    "@trpc/client": "^11.8.1",
-    "@trpc/server": "^11.8.1",
-    "canvas-confetti": "^1.9.4",
-    "howler": "^2.2.4",
-    "marked": "^4.3.0",
-    "mei": "github:ninjawarrior1337/mei",
-    "three": "^0.143.0",
-    "unplugin-icons": "^0.19.3"
   }
 }

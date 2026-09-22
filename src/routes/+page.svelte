@@ -26,7 +26,7 @@
         Amphibia: ["#11A77D", "https://amphibia.fandom.com/wiki/Amphibia_Wiki"],
         software: ["#3399ff", "/projects"]
     };
-    const colorText = (input: String): String => {
+    const colorText = (input: string): string => {
         var finalStr = input;
         for (var [key, [color, link]] of Object.entries(colorTable)) {
             if (input.includes(key)) {

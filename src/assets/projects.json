@@ -1,88 +1,76 @@
 [
-   {
-      "title": "Hanamaru",
-      "description": "A Go-based **discord bot** with a bunch of Japanese-learning utilities and a spoonful of useless image editing features.\n",
-      "img": "/assets/projects/hanamaru.png",
-      "links": [
-         "go.dev=https://pkg.go.dev/github.com/ninjawarrior1337/hanamaru-go",
-         "GitHub=https://github.com/ninjawarrior1337/hanamaru-go"
-      ]
-   },
-   {
-      "title": "Geta",
-      "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._",
-      "logoChar": "駄",
-      "links": [
-         "Website=https://geta.v.treelar.xyz",
-         "GitHub=https://github.com/ninjawarrior1337/geta"
-      ]
-   },
-   {
-      "title": "Ki",
-      "description": "A mood tracker inspired by github:bytesbybianca/mood-tracker and built with React Server Components",
-      "logoChar": "気",
-      "links": [
-         "Website=https://t3.v.treelar.xyz",
-         "GitHub=https://github.com/ninjawarrior1337/ki"
-      ]
-   },
-   {
-      "title": "Ongaku",
-      "description": "An [openings.moe](https://openings.moe) inspired website with more up to date openings and endings",
-      "img": "/assets/projects/ongaku.png",
-      "links": [
-         "Ongaku=https://ongaku.treelar.xyz",
-         "GitHub=https://github.com/ninjawarrior1337/ongaku"
-      ]
-   },
-   {
-      "title": "Boushi",
-      "description": "A smartphone controlled 2D Array of LEDs on a graduation cap",
-      "img": "/assets/projects/boushi.png",
-      "links": [
-         "GitHub=https://github.com/ninjawarrior1337/boushi"
-      ]
-   },
-   {
-      "title": "Mari",
-      "img": "https://mari.v.treelar.xyz/mari.png",
-      "description": "A peer-to-peer file sharing service that utilizes WebRTC and uses React for the frontend. This is a replacement for reep.io.",
-      "links": [
-         "Mari=https://mari.treelar.cf",
-         "GitHub=https://github.com/ninjawarrior1337/mari"
-      ]
-   },
-   {
-      "title": "Reverse Game",
-      "description": "A Mario-like game that was supposed to be that you reset Mario levels but just ended up being a mario clone.",
-      "img": "/assets/projects/alejandro.png",
-      "links": [
-         "Reverse=https://fs.treelar.xyz/reverse",
-         "GitHub=https://github.com/ReverseDevTeam/ReverseGame"
-      ]
-   },
-   {
-      "title": "lovelive-hd-ur-*",
-      "description": "I wrote this just so I could get AI upscaled wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 4 different languages (Rust, Typescript, Kotlin, and Go).",
-      "links": [
-         "Rust=https://github.com/ninjawarrior1337/lovelive-hd-ur-rs",
-         "TS/JS=https://github.com/ninjawarrior1337/love-live-hd-ur-server",
-         "Kotlin=https://github.com/ninjawarrior1337/lovelive-hd-ur-server-spring",
-         "Go=https://github.com/ninjawarrior1337/lovelive-hd-ur-go"
-      ]
-   },
-   {
-      "title": "llwikiaapi",
-      "description": "An API for the Love Live Wikia Page. This was so that I could look at lyrics and listen to songs and not get judged at school... In hindsight though people would probably judge me for lookin at a wall of text vs a nice looking webpage but meh, I don't care about _judgement_ from reading text.\n",
-      "links": [
-         "API=https://llwikia.v.treelar.xyz"
-      ]
-   },
-   {
-      "title": "This Website",
-      "description": "Yeah, I don't know what else to say about this one.",
-      "links": [
-         "treelar.xyz=https://treelar.xyz"
-      ]
-   }
+  {
+    "title": "Hanamaru",
+    "description": "A Go-based **discord bot** with a bunch of Japanese-learning utilities and a spoonful of useless image editing features.\n",
+    "img": "/assets/projects/hanamaru.png",
+    "links": [
+      "go.dev=https://pkg.go.dev/github.com/ninjawarrior1337/hanamaru-go",
+      "GitHub=https://github.com/ninjawarrior1337/hanamaru-go"
+    ]
+  },
+  {
+    "title": "Geta",
+    "description": "Split bill calculation for going to restaurants in the US. _Me when the only other good app to do this is an iOS exclusive._",
+    "logoChar": "駄",
+    "links": [
+      "Website=https://geta.v.treelar.xyz",
+      "GitHub=https://github.com/ninjawarrior1337/geta"
+    ]
+  },
+  {
+    "title": "Ki",
+    "description": "A mood tracker inspired by github:bytesbybianca/mood-tracker and built with React Server Components",
+    "logoChar": "気",
+    "links": ["Website=https://t3.v.treelar.xyz", "GitHub=https://github.com/ninjawarrior1337/ki"]
+  },
+  {
+    "title": "Ongaku",
+    "description": "An [openings.moe](https://openings.moe) inspired website with more up to date openings and endings",
+    "img": "/assets/projects/ongaku.png",
+    "links": [
+      "Ongaku=https://ongaku.treelar.xyz",
+      "GitHub=https://github.com/ninjawarrior1337/ongaku"
+    ]
+  },
+  {
+    "title": "Boushi",
+    "description": "A smartphone controlled 2D Array of LEDs on a graduation cap",
+    "img": "/assets/projects/boushi.png",
+    "links": ["GitHub=https://github.com/ninjawarrior1337/boushi"]
+  },
+  {
+    "title": "Mari",
+    "img": "https://mari.v.treelar.xyz/mari.png",
+    "description": "A peer-to-peer file sharing service that utilizes WebRTC and uses React for the frontend. This is a replacement for reep.io.",
+    "links": ["Mari=https://mari.treelar.cf", "GitHub=https://github.com/ninjawarrior1337/mari"]
+  },
+  {
+    "title": "Reverse Game",
+    "description": "A Mario-like game that was supposed to be that you reset Mario levels but just ended up being a mario clone.",
+    "img": "/assets/projects/alejandro.png",
+    "links": [
+      "Reverse=https://fs.treelar.xyz/reverse",
+      "GitHub=https://github.com/ReverseDevTeam/ReverseGame"
+    ]
+  },
+  {
+    "title": "lovelive-hd-ur-*",
+    "description": "I wrote this just so I could get AI upscaled wallpapers of SIF cards by pressing a button on my phone. Actually one of my favorite projects as I've rewritten it in 4 different languages (Rust, Typescript, Kotlin, and Go).",
+    "links": [
+      "Rust=https://github.com/ninjawarrior1337/lovelive-hd-ur-rs",
+      "TS/JS=https://github.com/ninjawarrior1337/love-live-hd-ur-server",
+      "Kotlin=https://github.com/ninjawarrior1337/lovelive-hd-ur-server-spring",
+      "Go=https://github.com/ninjawarrior1337/lovelive-hd-ur-go"
+    ]
+  },
+  {
+    "title": "llwikiaapi",
+    "description": "An API for the Love Live Wikia Page. This was so that I could look at lyrics and listen to songs and not get judged at school... In hindsight though people would probably judge me for lookin at a wall of text vs a nice looking webpage but meh, I don't care about _judgement_ from reading text.\n",
+    "links": ["API=https://llwikia.v.treelar.xyz"]
+  },
+  {
+    "title": "This Website",
+    "description": "Yeah, I don't know what else to say about this one.",
+    "links": ["treelar.xyz=https://treelar.xyz"]
+  }
 ]

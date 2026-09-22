@@ -1,6 +1,6 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - esbuild
-  - mei
-  - sharp
-  - svelte-preprocess
+allowBuilds:
+  "@tailwindcss/oxide": true
+  esbuild: true
+  "mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457": true
+  sharp: true
+  svelte-preprocess: true

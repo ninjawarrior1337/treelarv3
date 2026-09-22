@@ -8,7 +8,7 @@ let birthdayToday = $state<RouterOutput["tokubetsu"]["birthdayToday"]>(null);
 
 export const useIdolStore = () => {
   $effect(() => {
-    if(!birthdayToday) {
+    if (!birthdayToday) {
       trpc.tokubetsu.birthdayToday.query().then((v) => (birthdayToday = v));
     }
   });
