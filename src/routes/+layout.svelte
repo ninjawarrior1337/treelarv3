@@ -4,21 +4,19 @@
     import Footer from "../components/Footer.svelte";
     import "../styles.css";
 
-    import { useIdolStore } from "./store.svelte";
     interface Props {
         children?: import("svelte").Snippet;
+        data: import("./$types").LayoutData;
     }
 
-    let idolData = useIdolStore();
-
-    let { children }: Props = $props();
-
-    let colors = $derived(idolData.data?.color ? [idolData.data?.color] : []);
+    let { children, data }: Props = $props();
 </script>
 
 <template>
     <div class="min-h-screen overflow-x-hidden text-white bg-gray-900">
-        <Confetti {colors}></Confetti>
+        {#await data.birthday then idol}
+            <Confetti colors={idol?.color ? [idol.color] : []}></Confetti>
+        {/await}
         {@render children?.()}
         <BottomNav></BottomNav>
         <Footer></Footer>

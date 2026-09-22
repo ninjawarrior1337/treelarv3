@@ -1,5 +1,5 @@
 <img
-  class="lg:order-last mx-12 transform-gpu py-16 aspect-square w-[350px] lg:w-[450px] scale-[175%] translate-y-12"
+  class="lg:order-last mx-12 transform-gpu py-16 aspect-square text-transparent w-[350px] lg:w-[450px] scale-[175%] translate-y-12"
   src="/logo/logo2024.svg"
   alt="big logo"
 />

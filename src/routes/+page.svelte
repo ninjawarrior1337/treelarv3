@@ -3,8 +3,7 @@
     import Logo from "../components/Logo.svelte";
     import FaMusic from "~icons/fa/music"
 
-    import {useIdolStore} from "./store.svelte"
-    import { trpc } from "../trpc";
+    import type { PageProps } from "./$types";
 
     const colorTable: {[k: string]: [string, string]} = {
         Vue: ["#41B883", "https://vuejs.org"],
@@ -39,7 +38,7 @@
         return finalStr;
     };
 
-    const idolData = useIdolStore()
+    let { data }: PageProps = $props();
 </script>
 
 <svelte:head>
@@ -67,16 +66,18 @@
                 {@html colorText("I use NixOS / macOS ")}
             </h2>
         </div>
-        
 
-        {#if idolData.data}
-        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {idolData.data.color}">
-            {#if idolData.data.name.includes("Miku") && idolData.data.birthday == "3/9"}
-            Happy {idolData.data.name.split(" ")[1]} Day!
+
+        {#await data.birthday then idol}
+        {#if idol}
+        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {idol.color}">
+            {#if idol.name.includes("Miku") && idol.birthday == "3/9"}
+            Happy {idol.name.split(" ")[1]} Day!
             {:else}
-            Happy Birthday {idolData.data.name}!
+            Happy Birthday {idol.name}!
             {/if}
         </h2>
         {/if}
+        {/await}
     </div>
 </div>
