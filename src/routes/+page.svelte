@@ -45,7 +45,7 @@
     <title>Treelar</title>
 </svelte:head>
 
-<div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen">
+<div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-svh">
     <Logo/>
     <div class="mx-16 space-y-2">
         <h1 class="text-4xl lg:text-6xl mb-4 pb-4">

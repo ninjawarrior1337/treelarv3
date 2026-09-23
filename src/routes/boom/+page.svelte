@@ -51,7 +51,7 @@
   });
 </script>
 
-<div class="grid w-screen h-screen place-items-center content-center space-y-4">
+<div class="grid w-screen h-svh place-items-center content-center space-y-4">
   <button class="bg-treelar text-4xl rounded-sm p-2" onclick={playBoom}>
     Boom Now
   </button>

@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <div class="min-h-screen overflow-x-hidden text-white bg-gray-900">
+    <div class="min-h-svh overflow-x-hidden text-white bg-gray-900">
         {#await data.birthdays then idols}
             <Confetti colors={idols.map((i) => i.color)}></Confetti>
         {/await}
