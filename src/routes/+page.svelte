@@ -60,10 +60,10 @@
                 {@html colorText("日本語勉強中")}
             </h2>
             <h2>
-                {@html colorText("Svelte / React / Vue")}
+                <!-- {@html colorText("Svelte / React / Vue")} -->
             </h2>
             <h2>
-                {@html colorText("I use NixOS / macOS ")}
+                {@html colorText("I use NixOS / macOS")}
             </h2>
         </div>
 
@@ -77,7 +77,7 @@
         >
             {#each idols as idol (idol.name + idol.birthday)}
             <li
-                class="[&:not(:first-child)]:marker:content-[none]"
+                class="not-first:marker:content-[none]"
                 style="color: {idol.color}"
             >
                 <!-- truncate clips, and the ::marker is painted outside the li's box,
