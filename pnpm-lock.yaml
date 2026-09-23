@@ -183,7 +183,7 @@ importers:
         version: 4.3.0
       mei:
         specifier: github:ninjawarrior1337/mei
-        version: https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.57.1)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(@types/node@26.6.2)(@vercel/functions@2.2.13)(esbuild@0.28.2)(jiti@2.7.0)(rollup@4.63.4)(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0))(yaml@2.9.1)(zod-openapi@5.4.6(zod@4.6.5))
+        version: https://codeload.github.com/ninjawarrior1337/mei/tar.gz/c94a1cd7a408f828e9644f9f9eeba2b2a88efc8b(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.57.1)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(@types/node@26.6.2)(@vercel/functions@2.2.13)(esbuild@0.28.2)(jiti@2.7.0)(rollup@4.63.4)(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0))(yaml@2.9.1)(zod-openapi@5.4.6(zod@4.6.5))
       three:
         specifier: ^0.143.0
         version: 0.143.0
@@ -3227,8 +3227,8 @@ packages:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
 
-  mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457:
-    resolution: {gitHosted: true, integrity: sha512-y1gmVP91vXTPwoQLce3TCWzQXcLrsYuzVt+Nvuew4G4x/bXaSjA6v0/BetzAdklQsUDznzZ4GS0t8Peh/GbQqw==, tarball: https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457}
+  mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/c94a1cd7a408f828e9644f9f9eeba2b2a88efc8b:
+    resolution: {gitHosted: true, integrity: sha512-2PREnU7alot+ohHy/xvMS5y4hZDGyKUceNMUpb02Qr4/KbBBR44ST6Pmm/0RQgbF/xQkqtlC53Xwnu+xRQGILg==, tarball: https://codeload.github.com/ninjawarrior1337/mei/tar.gz/c94a1cd7a408f828e9644f9f9eeba2b2a88efc8b}
     version: 0.0.1
 
   merge-stream@2.0.0:
@@ -6792,7 +6792,7 @@ snapshots:
 
   media-typer@0.3.0: {}
 
-  mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.57.1)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(@types/node@26.6.2)(@vercel/functions@2.2.13)(esbuild@0.28.2)(jiti@2.7.0)(rollup@4.63.4)(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0))(yaml@2.9.1)(zod-openapi@5.4.6(zod@4.6.5)):
+  mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/c94a1cd7a408f828e9644f9f9eeba2b2a88efc8b(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.57.1)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(@types/node@26.6.2)(@vercel/functions@2.2.13)(esbuild@0.28.2)(jiti@2.7.0)(rollup@4.63.4)(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0))(yaml@2.9.1)(zod-openapi@5.4.6(zod@4.6.5)):
     dependencies:
       '@astrojs/vercel': 11.0.10(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@4.0.4(svelte@5.57.1)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(svelte@5.57.1)(typescript@5.9.3)(vite@5.4.21(@types/node@26.6.2)(lightningcss@1.32.0)))(astro@7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.6.2)(@vercel/functions@2.2.13)(jiti@2.7.0)(yaml@2.9.1))(rollup@4.63.4)(svelte@5.57.1)(vue@3.5.43(typescript@5.9.3))
       '@astrojs/vue': 7.0.3(@types/node@26.6.2)(astro@7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.6.2)(@vercel/functions@2.2.13)(jiti@2.7.0)(yaml@2.9.1))(esbuild@0.28.2)(jiti@2.7.0)(vue@3.5.43(typescript@5.9.3))(yaml@2.9.1)

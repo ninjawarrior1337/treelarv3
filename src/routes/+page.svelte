@@ -68,15 +68,15 @@
         </div>
 
 
-        {#await data.birthday then idol}
-        {#if idol}
-        <h2 class="text-2xl md:text-4xl pb-4 truncate" style="color: {idol.color}">
-            {#if idol.name.includes("Miku") && idol.birthday == "3/9"}
-            Happy {idol.name.split(" ")[1]} Day!
-            {:else}
-            Happy Birthday {idol.name}!
-            {/if}
-        </h2>
+        {#await data.birthdays then idols}
+        {#if idols.length > 0}
+        <div class="text-2xl lg:text-4xl pb-4 space-y-1">
+            {#each idols as idol (idol.name + idol.birthday)}
+            <h2 class="truncate" style="color: {idol.color}">
+                🎉 {#if idol.name.includes("Miku") && idol.birthday == "3/9"}{idol.name.split(" ")[1]} Day!{:else}{idol.name}!{/if}
+            </h2>
+            {/each}
+        </div>
         {/if}
         {/await}
     </div>

@@ -1,6 +1,7 @@
 allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
-  "mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/e201fe78923f1d3f1eacde3d3b78efe394595457": true
+  mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/c94a1cd7a408f828e9644f9f9eeba2b2a88efc8b: set this to true or false
+  "mei@https://codeload.github.com/ninjawarrior1337/mei/tar.gz/main": true
   sharp: true
   svelte-preprocess: true

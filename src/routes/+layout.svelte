@@ -14,8 +14,8 @@
 
 <template>
     <div class="min-h-screen overflow-x-hidden text-white bg-gray-900">
-        {#await data.birthday then idol}
-            <Confetti colors={idol?.color ? [idol.color] : []}></Confetti>
+        {#await data.birthdays then idols}
+            <Confetti colors={idols.map((i) => i.color)}></Confetti>
         {/await}
         {@render children?.()}
         <BottomNav></BottomNav>
