@@ -70,13 +70,24 @@
 
         {#await data.birthdays then idols}
         {#if idols.length > 0}
-        <div class="text-2xl lg:text-4xl pb-4 space-y-1">
+        <!-- ::marker only honours content/font/color — no padding or margin — so the
+             gap after the emoji comes from a non-collapsing space inside content. -->
+        <ul
+            class="text-2xl lg:text-4xl pb-4 space-y-1 list-disc list-outside marker:content-['🎉\a0']"
+        >
             {#each idols as idol (idol.name + idol.birthday)}
-            <h2 class="truncate" style="color: {idol.color}">
-                🎉 {#if idol.name.includes("Miku") && idol.birthday == "3/9"}{idol.name.split(" ")[1]} Day!{:else}{idol.name}!{/if}
-            </h2>
+            <li
+                class="[&:not(:first-child)]:marker:content-[none]"
+                style="color: {idol.color}"
+            >
+                <!-- truncate clips, and the ::marker is painted outside the li's box,
+                     so the clipping box has to be this inner span, not the li. -->
+                <span class="block truncate">
+                    {#if idol.name.includes("Miku") && idol.birthday == "3/9"}{idol.name.split(" ")[1]} Day!{:else}{idol.name}!{/if}
+                </span>
+            </li>
             {/each}
-        </div>
+        </ul>
         {/if}
         {/await}
     </div>
