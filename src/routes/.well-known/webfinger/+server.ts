@@ -1,4 +1,4 @@
-import { RequestHandler } from "@sveltejs/kit";
+import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = ({ url }) => {
   const _resource = url.searchParams.get("resource");

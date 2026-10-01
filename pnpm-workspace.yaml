@@ -6,3 +6,8 @@ allowBuilds:
   mei@git+https://github.com/ninjawarrior1337/mei.git: true
   sharp: true
   svelte-preprocess: true
+minimumReleaseAgeExclude:
+  - "@sveltejs/adapter-auto@8.0.0"
+  - "@sveltejs/adapter-node@6.0.0"
+  - "@sveltejs/adapter-vercel@7.0.0"
+  - "@sveltejs/kit@3.0.0"

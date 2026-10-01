@@ -1,6 +1,6 @@
 <script lang="ts">
   import confetti from "canvas-confetti";
-  import { browser } from "$app/environment";
+  import { browser } from '$app/env';
 
   interface Props {
     colors: string[];

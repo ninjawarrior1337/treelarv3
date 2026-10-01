@@ -30,15 +30,16 @@
 
         nativeBuildInputs = with pkgs; [
           nodejs
-          pnpm.configHook
+          pnpm
+          pnpmConfigHook
           makeWrapper
           npmHooks.npmBuildHook
         ];
 
-        pnpmDeps = pkgs.pnpm.fetchDeps {
+        pnpmDeps = pkgs.fetchPnpmDeps {
           inherit (finalAttrs) pname version src;
-          fetcherVersion = 2;
-          hash = "sha256-rmgiODE/ylu1ophJj9qL3Prh4st46xrhYJW0ITo2or4=";
+          fetcherVersion = 4;
+          hash = "sha256-e4YzPND0ige/3azNl0ZkZBGFtKl5zlxukDwsnG6hkug=";
         };
 
         buildPhase = ''

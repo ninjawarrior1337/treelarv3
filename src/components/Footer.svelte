@@ -6,7 +6,7 @@
   import TwitterLogo from "~icons/fa6-brands/x-twitter";
   import MastodonLogo from "~icons/fa6-brands/mastodon";
   import BlueskyLogo from "~icons/fa6-brands/bluesky";
-  import { page } from "$app/stores";
+  import { page } from '$app/state';
 
   const computeIcon = (path: string) => {
     if (path.includes("projects")) {
@@ -18,14 +18,14 @@
     }
   };
 
-  let SvelteComponent = $derived(computeIcon($page.url.pathname));
+  let SvelteComponent = $derived(computeIcon(page.url.pathname));
 </script>
 
 <div class="bg-linear-to-r from-muse via-treelar to-treelar h-1"></div>
 <div class="py-4 text-center w-full text-xl">
   <div class="flex items-center justify-center space-x-1">
     <span>Made with</span>
-    <SvelteComponent class="text-muse"></SvelteComponent>
+    <SvelteComponent class="text-muse" />
     <span>by</span>
     <span class="text-gradient-treelar">Treelar</span>
   </div>
@@ -34,21 +34,24 @@
       rel="prefetch noreferrer"
       target="_blank"
       href="https://github.com/ninjawarrior1337"
-    >
-      <GithubLogo></GithubLogo>
-    </a>
-    <a rel="me" href="https://bsky.app/profile/treelar.xyz" target="_blank">
-        <BlueskyLogo></BlueskyLogo>
-    </a>
-    <a rel="me" href="https://mastodon.social/@treelar" target="_blank">
-        <MastodonLogo></MastodonLogo>
-      </a>
+    ><GithubLogo /></a>
+
+    <a
+      rel="me"
+      href="https://bsky.app/profile/treelar.xyz"
+      target="_blank"
+    ><BlueskyLogo /></a>
+
+    <a
+      rel="me"
+      href="https://mastodon.social/@treelar"
+      target="_blank"
+    ><MastodonLogo /></a>
+
     <a
       rel="prefetch noreferrer"
       target="_blank"
       href="https://twitter.com/treeelar"
-    >
-      <TwitterLogo class="text-gray-800"></TwitterLogo>
-    </a>
+    ><TwitterLogo class="text-gray-800" /></a>
   </div>
 </div>
